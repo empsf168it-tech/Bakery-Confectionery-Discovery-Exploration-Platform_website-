@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Crumb &amp; Cocoa Journal — In-depth baking guides, artisan baker profiles, chocolate science, and sourdough fermentation insights." />
+  <title>The Bakehouse Journal &amp; Stories — Crumb &amp; Cocoa</title>
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🥐</text></svg>">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../assets/css/style.css" />
+  <link rel="stylesheet" href="../assets/css/dark-mode.css" />
+  <link id="rtl-stylesheet" rel="stylesheet" href="../assets/css/rtl.css" disabled />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  <style>
+    .blog-filter { display:flex;gap:.75rem;flex-wrap:wrap;justify-content:center;margin-bottom:3rem; }
+    .blog-filter-btn { padding:.5rem 1.3rem;border:2px solid var(--border);border-radius:var(--radius-full);font-weight:500;font-size:.85rem;color:var(--text-secondary);transition:var(--transition-bounce);background:var(--bg-card); }
+    .blog-filter-btn:hover,.blog-filter-btn.active { background:var(--primary);border-color:var(--primary);color:#fff;transform:translateY(-2px); }
+    .featured-post { display:grid;grid-template-columns:1fr;gap:2rem;margin-bottom:4rem;background:var(--bg-card);border:1px solid var(--border);border-radius:var(--radius-xl);overflow:hidden; }
+    @media(min-width:1025px){ .featured-post { grid-template-columns:1.5fr 1fr; } }
+    .featured-post-img { height:320px;overflow:hidden; }
+    @media(min-width:768px){ .featured-post-img { height:420px; } }
+    @media(min-width:1024px){ .featured-post-img { height:480px; } }
+    @media(min-width:1025px){ .featured-post-img { height:100%; } }
+    .featured-post-img img { width:100%;height:100%;object-fit:cover;transition:transform .5s ease; }
+    .featured-post:hover .featured-post-img img { transform:scale(1.05); }
+    .featured-post-body { padding:2.5rem;display:flex;flex-direction:column;justify-content:center;align-items:center;text-align:center; }
+    .sidebar-card { background:var(--bg-card);border:1px solid var(--border);border-radius:var(--radius-lg);padding:1.75rem;margin-bottom:1.5rem; }
+    .sidebar-card h4 { margin-bottom:1.25rem;font-size:1.1rem; }
+    .recent-post { display:flex;gap:1rem;padding:.75rem 0;border-bottom:1px solid var(--border);transition:var(--transition); }
+    .recent-post:last-child { border-bottom:none; }
+    .recent-post:hover { padding-left:.5rem; }
+    .recent-post-img { width:64px;height:64px;border-radius:var(--radius-sm);overflow:hidden;flex-shrink:0; }
+    .recent-post-img img { width:100%;height:100%;object-fit:cover; }
+    .recent-post-title { font-weight:500;font-size:.88rem;margin-bottom:.3rem;transition:var(--transition); }
+    .recent-post:hover .recent-post-title { color:var(--primary); }
+    .recent-post-date { font-size:.78rem;color:var(--text-light); }
+    .tags { display:flex;flex-wrap:wrap;gap:.5rem; }
+    .tag-pill { padding:.3rem .9rem;background:var(--bg-secondary);border:1px solid var(--border);border-radius:var(--radius-full);font-size:.8rem;color:var(--text-secondary);transition:var(--transition-bounce);cursor:pointer; }
+    .tag-pill:hover { background:var(--primary);border-color:var(--primary);color:#fff;transform:scale(1.05); }
+    .main-blog-grid { display:grid;grid-template-columns:1fr;gap:3rem; }
+    @media(min-width:1024px){
+      .main-blog-grid { grid-template-columns:2fr 1fr; }
+      .blog-grid { grid-template-columns: repeat(2, 1fr); }
+    }
+    @media(max-width:1023px){
+      .main-blog-grid > aside {
+        order: -1;
+      }
+    }
+    @media(max-width:360px) {
+      .section[aria-label="Newsletter"] form input,
+      .section[aria-label="Newsletter"] form button {
+        width: 100% !important;
+        max-width: 100% !important;
+      }
+    }
+  </style>
+</head>
+<body>
+
+<!-- HEADER -->
+<header class="header" id="header">
+  <nav class="nav-container">
+    <a href="../index.html" class="brand">
+      <div class="brand-logo">
+        <svg viewBox="16 26 68 54" fill="none" xmlns="http://www.w3.org/2000/svg" style="width:33px; height:33px; display:block;">
+          <path d="M26 44Q28.5 44 28.5 41.5Q28.5 44 31 44Q28.5 44 28.5 46.5Q28.5 44 26 44Z" fill="#ffffff"/>
+          <path d="M20 54Q22.5 54 22.5 51.5Q22.5 54 25 54Q22.5 54 22.5 56.5Q22.5 54 20 54Z" fill="#ffffff"/>
+          <path d="M41 38Q43 38 43 36Q43 38 45 38Q43 38 43 40Q43 38 41 38Z" fill="#ffffff"/>
+          <path d="M55 38Q57 38 57 36Q57 38 59 38Q57 38 57 40Q57 38 55 38Z" fill="#ffffff"/>
+          <path d="M69 44Q71.5 44 71.5 41.5Q71.5 44 74 44Q71.5 44 71.5 46.5Q71.5 44 69 44Z" fill="#ffffff"/>
+          <path d="M75 54Q77.5 54 77.5 51.5Q77.5 54 80 54Q77.5 54 77.5 56.5Q77.5 54 75 54Z" fill="#ffffff"/>
+          <circle cx="37" cy="41" r="1" fill="#ffffff"/>
+          <circle cx="63" cy="41" r="1" fill="#ffffff"/>
+          <circle cx="32" cy="50" r="1" fill="#ffffff"/>
+          <circle cx="68" cy="50" r="1" fill="#ffffff"/>
+          <path d="M50 31C49 33 48.5 35 50 37.5C51.5 35 51 33 50 31Z" fill="#ffffff"/>
+          <path d="M50 38C48 40.5 45.5 42 49 44.5C52.5 42 52 40.5 50 38Z" fill="#ffffff"/>
+          <path d="M48 42C44.5 40 43 43.5 48.5 44.5Z" fill="#ffffff"/>
+          <path d="M52 42C55.5 40 57 43.5 51.5 44.5Z" fill="#ffffff"/>
+          <path d="M39 44C39 42.5 61 42.5 61 44V51.5C61 53.5 39 53.5 39 51.5Z" fill="#ffffff" fill-opacity="0.2" stroke="#ffffff" stroke-width="1.8"/>
+          <path d="M39 44C39 45.5 61 45.5 61 44" stroke="#ffffff" stroke-width="1.8"/>
+          <path d="M39.5 48.5C42.5 51 45.5 51 48.5 48.5C51.5 51 54.5 51 57.5 48.5C59.5 50 60.5 49.5 60.5 48.5" stroke="#ffffff" stroke-width="1.8" stroke-linecap="round" fill="none"/>
+          <path d="M34.5 51C34.5 49 65.5 49 65.5 51V60.5C65.5 63 34.5 63 34.5 60.5Z" fill="#ffffff" fill-opacity="0.2" stroke="#ffffff" stroke-width="1.8"/>
+          <path d="M34.5 51C34.5 53 65.5 53 65.5 51" stroke="#ffffff" stroke-width="1.8"/>
+          <path d="M35 56.5C39 60 43.5 60 48 56.5C52.5 60 57 60 61 56.5C63.5 58.5 65 57.5 65 56.5" stroke="#ffffff" stroke-width="1.8" stroke-linecap="round" fill="none"/>
+          <path d="M29.5 59.5C29.5 57 70.5 57 70.5 59.5V70C70.5 73.5 29.5 73.5 29.5 70Z" fill="#ffffff" fill-opacity="0.2" stroke="#ffffff" stroke-width="1.8"/>
+          <path d="M29.5 59.5C29.5 62 70.5 62 70.5 59.5" stroke="#ffffff" stroke-width="1.8"/>
+          <path d="M30 65C35 70 41 70 47.5 65C54 70 60 70 65 65C68 67.5 70 66.5 70 65" stroke="#ffffff" stroke-width="1.8" stroke-linecap="round" fill="none"/>
+          <path d="M27 72C27 70 73 70 73 72C73 74.5 27 74.5 27 72Z" fill="#ffffff" fill-opacity="0.4" stroke="#ffffff" stroke-width="1.6"/>
+          <path d="M25 75C25 73 75 73 75 75C75 77.5 25 77.5 25 75Z" fill="#ffffff" fill-opacity="0.6" stroke="#ffffff" stroke-width="1.6"/>
+        </svg>
+      </div>
+      <span class="brand-name">Crumb &amp; <span>Cocoa</span></span>
+    </a>
+    <ul class="nav-menu">
+      <li><a href="../index.html" class="nav-link">Home</a></li>
+      <li><a href="about.html" class="nav-link">About</a></li>
+      <li><a href="services.html" class="nav-link">Services</a></li>
+      <li><a href="blog.html" class="nav-link active">Blog</a></li>
+      <li><a href="contact.html" class="nav-link">Contact</a></li>
+    </ul>
+    <div class="nav-actions">
+      <button class="nav-icon-btn" onclick="window.CrumbCocoa.RTLManager.toggle()" title="Toggle RTL" aria-label="Toggle RTL" style="font-size: 0.78rem; font-weight: 550;">RTL</button>
+      <button class="nav-icon-btn" onclick="window.CrumbCocoa.ThemeManager.toggle()" title="Toggle Theme" aria-label="Toggle theme"><i class="theme-toggle-icon fas fa-moon"></i></button>
+    </div>
+    <button class="hamburger" aria-label="Open menu"><span></span><span></span><span></span></button>
+  </nav>
+</header>
+
+<div class="mobile-menu" role="dialog" aria-modal="true">
+  <button class="mobile-close" aria-label="Close menu"><i class="fas fa-times"></i></button>
+  <a href="../index.html" class="nav-link">Home</a>
+  <a href="about.html" class="nav-link">About</a>
+  <a href="services.html" class="nav-link">Services</a>
+  <a href="blog.html" class="nav-link active">Blog</a>
+  <a href="contact.html" class="nav-link">Contact</a>
+  <div class="mobile-menu-actions">
+    <div class="mobile-menu-row">
+      <button class="btn btn-ghost" onclick="window.CrumbCocoa.RTLManager.toggle()" style="font-weight: 550;">RTL</button>
+      <button class="btn btn-ghost" onclick="window.CrumbCocoa.ThemeManager.toggle()"><i class="theme-toggle-icon fas fa-moon"></i></button>
+    </div>
+  </div>
+</div>
+
+<!-- PAGE HEADER -->
+<div class="page-header">
+  <div class="page-header-container">
+    <div class="page-header-content">
+      <h1>The Bakehouse Journal</h1>
+      <p>Baking guides, artisan chef stories, single-origin cacao science, and sweet discoveries straight from our curators.</p>
+    </div>
+    <div class="page-header-image">
+      <img src="https://images.unsplash.com/photo-1509440159596-0249088772ff?q=80&w=800&auto=format&fit=crop" alt="Crumb &amp; Cocoa Journal Insights" />
+    </div>
+  </div>
+</div>
+
+<!-- ══ SECTION 2: BLOG GRID + SIDEBAR ══ -->
+<section class="section bg-secondary-section" aria-label="Blog posts">
+  <div class="container">
+    <div class="text-center animate-on-scroll" style="margin-bottom:2rem;">
+      <span class="section-label">Journal &amp; Stories</span>
+      <h2 class="section-title">Latest From the Flour &amp; Cocoa World</h2>
+    </div>
+    <div class="blog-filter">
+      <button class="blog-filter-btn active" data-filter="all">All Articles</button>
+      <button class="blog-filter-btn" data-filter="guides">Baking Guides</button>
+      <button class="blog-filter-btn" data-filter="stories">Chef Stories</button>
+      <button class="blog-filter-btn" data-filter="ingredients">Ingredients</button>
+      <button class="blog-filter-btn" data-filter="science">Bakehouse Science</button>
+    </div>
+
+    <div class="main-blog-grid">
+      <!-- Posts -->
+      <div>
+        <div class="blog-grid">
+          <!-- Post 1 -->
+          <div class="blog-card animate-on-scroll delay-1" data-category="guides">
+            <div class="blog-card-img"><img src="https://images.unsplash.com/photo-1555507036-ab1f4038808a?q=80&w=800&auto=format&fit=crop" alt="The Art of the 72-Hour Croissant" loading="lazy" /></div>
+            <div class="blog-card-body">
+              <div class="blog-meta"><span><i class="fas fa-calendar"></i> Oct 12, 2026</span><span><i class="fas fa-clock"></i> 6 min read</span></div>
+              <h3>The Art of the 72-Hour Croissant: Master Lamination</h3>
+              <p>Discover how butter temperature, dough plasticity, and turn folding build the coveted honeycomb crumb in authentic French croissants.</p>
+              <a href="#" class="blog-read-more">Read Guide <i class="fas fa-arrow-right"></i></a>
+            </div>
+          </div>
+          <!-- Post 2 -->
+          <div class="blog-card animate-on-scroll delay-2" data-category="science">
+            <div class="blog-card-img"><img src="https://images.unsplash.com/photo-1548907040-4baa42d10919?q=80&w=800&auto=format&fit=crop" alt="Bean-to-Bar Chemistry and Cocoa Conching" loading="lazy" /></div>
+            <div class="blog-card-body">
+              <div class="blog-meta"><span><i class="fas fa-calendar"></i> Oct 05, 2026</span><span><i class="fas fa-clock"></i> 7 min read</span></div>
+              <h3>Bean-to-Bar Chemistry: The Science of Slow Cocoa Conching</h3>
+              <p>An in-depth look at cocoa roasting curves, polyphenol reductions, and why 72 hours of granite conching yields unmatched velvety ganache.</p>
+              <a href="#" class="blog-read-more">Read Science <i class="fas fa-arrow-right"></i></a>
+            </div>
+          </div>
+          <!-- Post 3 -->
+          <div class="blog-card animate-on-scroll delay-1" data-category="stories">
+            <div class="blog-card-img"><img src="https://images.unsplash.com/photo-1509440159596-0249088772ff?q=80&w=800&auto=format&fit=crop" alt="Centuries of Wild Levain in Paris" loading="lazy" /></div>
+            <div class="blog-card-body">
+              <div class="blog-meta"><span><i class="fas fa-calendar"></i> Sep 28, 2026</span><span><i class="fas fa-clock"></i> 5 min read</span></div>
+              <h3>Inside Paris's Oldest Sourdough Hearth: Decades of Levain</h3>
+              <p>A journey into the subterranean wood-fired deck ovens of Montmartre, where a third-generation baker feeds a 120-year-old starter daily.</p>
+              <a href="#" class="blog-read-more">Read Story <i class="fas fa-arrow-right"></i></a>
+            </div>
+          </div>
+          <!-- Post 4 -->
+          <div class="blog-card animate-on-scroll delay-2" data-category="ingredients">
+            <div class="blog-card-img"><img src="https://images.unsplash.com/photo-1569864358642-9d1684040f43?q=80&w=800&auto=format&fit=crop" alt="French Macaron Secrets" loading="lazy" /></div>
+            <div class="blog-card-body">
+              <div class="blog-meta"><span><i class="fas fa-calendar"></i> Sep 20, 2026</span><span><i class="fas fa-clock"></i> 6 min read</span></div>
+              <h3>Demystifying French Macarons: Humidity &amp; Meringue Chemistry</h3>
+              <p>Why ambient bakery humidity affects macaron feet, comparing French vs. Italian meringue, and preserving delicate crisp shells.</p>
+              <a href="#" class="blog-read-more">Read Article <i class="fas fa-arrow-right"></i></a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Sidebar -->
+      <aside>
+        <div class="sidebar-card animate-on-scroll">
+          <h4>Search the Journal</h4>
+          <div style="position:relative;">
+            <input type="search" class="form-control" placeholder="Search pastries, cacao, bakes..." aria-label="Search articles" />
+            <button style="position:absolute;right:1rem;top:50%;transform:translateY(-50%);color:var(--primary);" aria-label="Search"><i class="fas fa-search"></i></button>
+          </div>
+        </div>
+        <div class="sidebar-card animate-on-scroll delay-1">
+          <h4>Recent Discoveries</h4>
+          <div class="recent-post"><div class="recent-post-img"><img src="https://images.unsplash.com/photo-1555507036-ab1f4038808a?q=80&w=100&auto=format&fit=crop" alt="Recent post" loading="lazy" /></div><div><div class="recent-post-title">Mastering 72h Butter Lamination</div><div class="recent-post-date">Oct 12, 2026</div></div></div>
+          <div class="recent-post"><div class="recent-post-img"><img src="https://images.unsplash.com/photo-1548907040-4baa42d10919?q=80&w=100&auto=format&fit=crop" alt="Recent post" loading="lazy" /></div><div><div class="recent-post-title">Slow Cocoa Conching Science</div><div class="recent-post-date">Oct 05, 2026</div></div></div>
+          <div class="recent-post"><div class="recent-post-img"><img src="https://images.unsplash.com/photo-1509440159596-0249088772ff?q=80&w=100&auto=format&fit=crop" alt="Recent post" loading="lazy" /></div><div><div class="recent-post-title">Montmartre Sourdough Secrets</div><div class="recent-post-date">Sep 28, 2026</div></div></div>
+        </div>
+        <div class="sidebar-card animate-on-scroll delay-2">
+          <h4>Popular Exploration Tags</h4>
+          <div class="tags">
+            <span class="tag-pill">French Viennoiserie</span><span class="tag-pill">Wild Sourdough</span><span class="tag-pill">Bean-to-Bar</span><span class="tag-pill">Macarons</span><span class="tag-pill">Lamination</span><span class="tag-pill">Ancient Grains</span><span class="tag-pill">Sensory Tasting</span>
+          </div>
+        </div>
+        <div class="sidebar-card animate-on-scroll delay-3" style="background:linear-gradient(135deg,var(--primary),var(--secondary));border-color:transparent;">
+          <h4 style="color:#fff;margin-bottom:.75rem;">Suggest a Local Atelier</h4>
+          <p style="color:rgba(255,255,255,.9);font-size:.9rem;margin-bottom:1.25rem;">Know an extraordinary bakery or chocolatier crafting unforgettable treats? Nominate them for our editorial showcase.</p>
+          <a href="contact.html" class="btn btn-white btn-sm" style="width:100%;justify-content:center;">Nominate an Atelier</a>
+        </div>
+      </aside>
+    </div>
+  </div>
+</section>
+
+<!-- ══ SECTION 3: FAQ ══ -->
+<section class="section" aria-label="FAQ">
+  <div class="container" style="max-width:800px;">
+    <div class="text-center animate-on-scroll">
+      <span class="section-label">Exploration FAQ</span>
+      <h2 class="section-title">Frequently Asked Questions</h2>
+      <p class="section-desc">Quick answers about our curation standards, tasting passes, and bakery discovery guidelines.</p>
+    </div>
+    <div style="margin-top:2rem;">
+      <div class="faq-item animate-on-scroll delay-1">
+        <div class="faq-question">Are the recipes and techniques in the journal verified by professional bakers? <i class="fas fa-chevron-down"></i></div>
+        <div class="faq-answer"><p>Yes! Every article, hydration formula, and lamination guide is written or reviewed by certified pastry chefs and master sourdough bakers.</p></div>
+      </div>
+      <div class="faq-item animate-on-scroll delay-2">
+        <div class="faq-question">How frequently are new bakery guides and articles published? <i class="fas fa-chevron-down"></i></div>
+        <div class="faq-answer"><p>We publish twice weekly, highlighting in-depth baker interviews on Tuesdays and culinary science and technique guides on Fridays.</p></div>
+      </div>
+      <div class="faq-item animate-on-scroll delay-3">
+        <div class="faq-question">Can I submit my own bakery story or guest article? <i class="fas fa-chevron-down"></i></div>
+        <div class="faq-answer"><p>We welcome submissions from practicing bakers, chocolatiers, and culinary historians. Send our editorial team a message through our Contact page.</p></div>
+      </div>
+      <div class="faq-item animate-on-scroll delay-4">
+        <div class="faq-question">Do you offer sensory tasting kits accompanying the articles? <i class="fas fa-chevron-down"></i></div>
+        <div class="faq-answer"><p>Yes! Our Connoisseur Guild members receive quarterly tasting boxes featuring the specific bean-to-bar chocolates and specialty confections highlighted in our articles.</p></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══ SECTION 4: NEWSLETTER ══ -->
+<section class="section bg-secondary-section" aria-label="Newsletter">
+  <div class="container" style="max-width:700px;">
+    <div class="text-center animate-on-scroll">
+      <span class="section-label">Stay in the Loop</span>
+      <h2 class="section-title">Get Bakehouse Drops in Your Inbox</h2>
+      <p class="section-desc">Curated bakery trail maps, unreleased seasonal drops, baker interviews, and lamination guides — delivered weekly.</p>
+      <form data-validate-form style="display:flex;gap:1rem;justify-content:center;flex-wrap:wrap;margin-top:2rem;">
+        <input type="email" class="form-control" placeholder="Enter your email address" data-validate="required,email" style="max-width:320px;" aria-label="Email address" />
+        <button type="submit" class="btn btn-primary btn-lg"><i class="fas fa-paper-plane"></i> Subscribe Free</button>
+      </form>
+      <p style="margin-top:1rem;font-size:.82rem;color:var(--text-light);">No spam, ever. Only the finest bakery discoveries. Unsubscribe anytime. 🥐</p>
+    </div>
+  </div>
+</section>
+
+<section class="cta-banner"><div class="container">
+  <span class="section-label" style="color:var(--accent)">Explore More</span>
+  <h2>Begin Your Sweet Discovery Journey</h2>
+  <p>Search over 500 curated artisan bakeries, sourdough ateliers, and chocolatiers worldwide.</p>
+  <div class="cta-actions"><a href="services.html" class="btn btn-accent btn-lg"><i class="fas fa-compass"></i> Explore Collections</a><a href="contact.html" class="btn btn-ghost btn-lg"><i class="fas fa-paper-plane"></i> Contact Editorial</a></div>
+</div></section>
+
+<footer class="footer">
+  <div class="footer-grid">
+    <div class="footer-brand">
+      <a href="../index.html" class="brand" style="text-decoration: none; margin-bottom: 1.5rem; display: inline-flex; align-items: center;">
+        <div class="brand-logo">
+          <svg viewBox="16 26 68 54" fill="none" xmlns="http://www.w3.org/2000/svg" style="width:33px; height:33px; display:block;">
+            <path d="M26 44Q28.5 44 28.5 41.5Q28.5 44 31 44Q28.5 44 28.5 46.5Q28.5 44 26 44Z" fill="#ffffff"/>
+            <path d="M20 54Q22.5 54 22.5 51.5Q22.5 54 25 54Q22.5 54 22.5 56.5Q22.5 54 20 54Z" fill="#ffffff"/>
+            <path d="M41 38Q43 38 43 36Q43 38 45 38Q43 38 43 40Q43 38 41 38Z" fill="#ffffff"/>
+            <path d="M55 38Q57 38 57 36Q57 38 59 38Q57 38 57 40Q57 38 55 38Z" fill="#ffffff"/>
+            <path d="M69 44Q71.5 44 71.5 41.5Q71.5 44 74 44Q71.5 44 71.5 46.5Q71.5 44 69 44Z" fill="#ffffff"/>
+            <path d="M75 54Q77.5 54 77.5 51.5Q77.5 54 80 54Q77.5 54 77.5 56.5Q77.5 54 75 54Z" fill="#ffffff"/>
+            <circle cx="37" cy="41" r="1" fill="#ffffff"/>
+            <circle cx="63" cy="41" r="1" fill="#ffffff"/>
+            <circle cx="32" cy="50" r="1" fill="#ffffff"/>
+            <circle cx="68" cy="50" r="1" fill="#ffffff"/>
+            <path d="M50 31C49 33 48.5 35 50 37.5C51.5 35 51 33 50 31Z" fill="#ffffff"/>
+            <path d="M50 38C48 40.5 45.5 42 49 44.5C52.5 42 52 40.5 50 38Z" fill="#ffffff"/>
+            <path d="M48 42C44.5 40 43 43.5 48.5 44.5Z" fill="#ffffff"/>
+            <path d="M52 42C55.5 40 57 43.5 51.5 44.5Z" fill="#ffffff"/>
+            <path d="M39 44C39 42.5 61 42.5 61 44V51.5C61 53.5 39 53.5 39 51.5Z" fill="#ffffff" fill-opacity="0.2" stroke="#ffffff" stroke-width="1.8"/>
+            <path d="M39 44C39 45.5 61 45.5 61 44" stroke="#ffffff" stroke-width="1.8"/>
+            <path d="M39.5 48.5C42.5 51 45.5 51 48.5 48.5C51.5 51 54.5 51 57.5 48.5C59.5 50 60.5 49.5 60.5 48.5" stroke="#ffffff" stroke-width="1.8" stroke-linecap="round" fill="none"/>
+            <path d="M34.5 51C34.5 49 65.5 49 65.5 51V60.5C65.5 63 34.5 63 34.5 60.5Z" fill="#ffffff" fill-opacity="0.2" stroke="#ffffff" stroke-width="1.8"/>
+            <path d="M34.5 51C34.5 53 65.5 53 65.5 51" stroke="#ffffff" stroke-width="1.8"/>
+            <path d="M35 56.5C39 60 43.5 60 48 56.5C52.5 60 57 60 61 56.5C63.5 58.5 65 57.5 65 56.5" stroke="#ffffff" stroke-width="1.8" stroke-linecap="round" fill="none"/>
+            <path d="M29.5 59.5C29.5 57 70.5 57 70.5 59.5V70C70.5 73.5 29.5 73.5 29.5 70Z" fill="#ffffff" fill-opacity="0.2" stroke="#ffffff" stroke-width="1.8"/>
+            <path d="M29.5 59.5C29.5 62 70.5 62 70.5 59.5" stroke="#ffffff" stroke-width="1.8"/>
+            <path d="M30 65C35 70 41 70 47.5 65C54 70 60 70 65 65C68 67.5 70 66.5 70 65" stroke="#ffffff" stroke-width="1.8" stroke-linecap="round" fill="none"/>
+            <path d="M27 72C27 70 73 70 73 72C73 74.5 27 74.5 27 72Z" fill="#ffffff" fill-opacity="0.4" stroke="#ffffff" stroke-width="1.6"/>
+            <path d="M25 75C25 73 75 73 75 75C75 77.5 25 77.5 25 75Z" fill="#ffffff" fill-opacity="0.6" stroke="#ffffff" stroke-width="1.6"/>
+          </svg>
+        </div>
+        <span class="brand-name">Crumb &amp; <span>Cocoa</span></span>
+      </a>
+      <p class="footer-desc">The premier discovery and exploration platform celebrating artisan bakeries, handcrafted pastries, fine chocolates, and sweet craftsmanship around the world.</p>
+      <div class="social-links">
+        <a href="#" class="social-link" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+        <a href="#" class="social-link" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+        <a href="#" class="social-link" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+        <a href="#" class="social-link" aria-label="Pinterest"><i class="fab fa-pinterest-p"></i></a>
+      </div>
+    </div>
+    <div><h4 class="footer-heading">Explore</h4><ul class="footer-links"><li><a href="../index.html" class="footer-link">Home</a></li><li><a href="about.html" class="footer-link">Our Discovery Mission</a></li><li><a href="services.html" class="footer-link">Collections &amp; Guides</a></li><li><a href="blog.html" class="footer-link">Baking Stories &amp; Journal</a></li><li><a href="contact.html" class="footer-link">Submit a Bakery</a></li></ul></div>
+    <div><h4 class="footer-heading">Collections</h4><ul class="footer-links"><li><a href="services.html" class="footer-link">French Viennoiserie</a></li><li><a href="services.html" class="footer-link">Wild Yeast Sourdough</a></li><li><a href="services.html" class="footer-link">Artisan Chocolates</a></li><li><a href="services.html" class="footer-link">Celebration Cakes</a></li><li><a href="services.html" class="footer-link">Seasonal Treat Boxes</a></li></ul></div>
+    <div><h4 class="footer-heading">Discovery Hub</h4><ul class="footer-links"><li><a href="tel:+18002786226" class="footer-link"><i class="fas fa-phone" style="width:16px;color:var(--accent)"></i> +1 (800) CRUMB-CO</a></li><li><a href="mailto:hello@crumbcocoa.com" class="footer-link"><i class="fas fa-envelope" style="width:16px;color:var(--accent)"></i> hello@crumbcocoa.com</a></li><li><a href="#" class="footer-link"><i class="fas fa-map-marker-alt" style="width:16px;color:var(--accent)"></i> Global Bakery Collective</a></li><li><a href="#" class="footer-link"><i class="fas fa-clock" style="width:16px;color:var(--accent)"></i> Daily Discovery Drops: 7AM EST</a></li></ul></div>
+  </div>
+  <div class="footer-bottom"><p>&copy; 2026 Crumb &amp; Cocoa. All rights reserved. Artisan Bakery &amp; Confectionery Discovery Platform.</p><div class="footer-bottom-links"><a href="#">Privacy Policy</a><a href="#">Terms of Discovery</a><a href="#">Artisan Certification</a></div></div>
+</footer>
+<button class="back-to-top" aria-label="Back to top"><i class="fas fa-chevron-up"></i></button>
+<script src="../assets/js/main.js"></script>
+
+</body>
+</html>

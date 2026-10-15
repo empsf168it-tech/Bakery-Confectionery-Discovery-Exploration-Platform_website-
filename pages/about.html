@@ -1,0 +1,408 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="About Crumb &amp; Cocoa — Our discovery mission, curation values, and the expert pastry team behind the world's premier bakery exploration platform." />
+  <title>About Us — Crumb &amp; Cocoa Discovery Platform</title>
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🥐</text></svg>">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../assets/css/style.css" />
+  <link rel="stylesheet" href="../assets/css/dark-mode.css" />
+  <link id="rtl-stylesheet" rel="stylesheet" href="../assets/css/rtl.css" disabled />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  <style>
+    .mission-grid { display:grid; grid-template-columns:1fr; gap:3rem; align-items:center; }
+    @media(min-width:1024px){ .mission-grid { grid-template-columns:1fr 1fr; } }
+    .mission-image { position:relative; border-radius:var(--radius-xl); overflow:hidden; border:1px solid var(--border); box-shadow:var(--shadow-md); }
+    .mission-image img { width:100%; height:auto; display:block; object-fit:contain; }
+    .mission-image-badge {
+      position:absolute; bottom:2rem; right:-1rem;
+      background:linear-gradient(135deg,var(--primary),var(--secondary));
+      color:#fff; padding:1.25rem 1.75rem; border-radius:var(--radius-lg);
+      box-shadow:var(--shadow-lg); text-align:center;
+    }
+    .mission-image-badge .big { font-family:var(--font-display);font-size:2.5rem;font-weight:550;display:block;line-height:1; }
+    .mission-image-badge small { font-size:.8rem;opacity:.9; }
+    .values-grid { display:grid; grid-template-columns:repeat(auto-fit,minmax(220px,1fr)); gap:1.5rem; }
+    @media(min-width:768px) and (max-width:1200px){
+      .values-grid { grid-template-columns: repeat(2, 1fr); }
+    }
+    .value-card {
+      padding:0 0 1.5rem 0; border-radius:var(--radius-lg); text-align:center;
+      border:1px solid var(--border); background:var(--bg-card);
+      transition:var(--transition-bounce);
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+    }
+    .value-card:hover { transform:translateY(-8px); box-shadow:var(--shadow-lg); border-color:var(--primary); }
+    .value-card-img-wrapper {
+      width: 100%;
+      height: 160px;
+      overflow: hidden;
+      border-bottom: 1px solid var(--border);
+      margin-bottom: 1rem;
+    }
+    @media (min-width: 768px) {
+      .value-card-img-wrapper {
+        height: 190px;
+      }
+    }
+    @media (min-width: 1024px) {
+      .value-card-img-wrapper {
+        height: 220px;
+      }
+    }
+    .value-card-img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+    .value-card:hover .value-card-img {
+      transform: scale(1.08);
+    }
+    .value-card-content {
+      padding: 0 1.25rem;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 0.35rem;
+    }
+    .value-card-content h3 {
+      font-size: 1.2rem;
+      font-weight: 500;
+      color: var(--text-primary);
+      margin-bottom: 0.25rem;
+    }
+    .value-card-content p {
+      font-size: 0.9rem;
+      color: var(--text-secondary);
+      line-height: 1.5;
+    }
+    .value-icon { font-size:2rem; display:block; margin-bottom:0.75rem; }
+    @media (min-width: 768px) and (max-width: 1200px) {
+      .about-team-grid {
+        grid-template-columns: repeat(2, 1fr) !important;
+      }
+      .about-team-grid .team-card:nth-child(4) {
+        grid-column: span 1 !important;
+        justify-self: auto !important;
+        max-width: none !important;
+        width: auto !important;
+        box-shadow: none !important;
+      }
+    }
+  </style>
+</head>
+<body>
+
+<!-- HEADER -->
+<header class="header" id="header">
+  <nav class="nav-container">
+    <a href="../index.html" class="brand">
+      <div class="brand-logo">
+        <svg viewBox="16 26 68 54" fill="none" xmlns="http://www.w3.org/2000/svg" style="width:33px; height:33px; display:block;">
+          <path d="M26 44Q28.5 44 28.5 41.5Q28.5 44 31 44Q28.5 44 28.5 46.5Q28.5 44 26 44Z" fill="#ffffff"/>
+          <path d="M20 54Q22.5 54 22.5 51.5Q22.5 54 25 54Q22.5 54 22.5 56.5Q22.5 54 20 54Z" fill="#ffffff"/>
+          <path d="M41 38Q43 38 43 36Q43 38 45 38Q43 38 43 40Q43 38 41 38Z" fill="#ffffff"/>
+          <path d="M55 38Q57 38 57 36Q57 38 59 38Q57 38 57 40Q57 38 55 38Z" fill="#ffffff"/>
+          <path d="M69 44Q71.5 44 71.5 41.5Q71.5 44 74 44Q71.5 44 71.5 46.5Q71.5 44 69 44Z" fill="#ffffff"/>
+          <path d="M75 54Q77.5 54 77.5 51.5Q77.5 54 80 54Q77.5 54 77.5 56.5Q77.5 54 75 54Z" fill="#ffffff"/>
+          <circle cx="37" cy="41" r="1" fill="#ffffff"/>
+          <circle cx="63" cy="41" r="1" fill="#ffffff"/>
+          <circle cx="32" cy="50" r="1" fill="#ffffff"/>
+          <circle cx="68" cy="50" r="1" fill="#ffffff"/>
+          <path d="M50 31C49 33 48.5 35 50 37.5C51.5 35 51 33 50 31Z" fill="#ffffff"/>
+          <path d="M50 38C48 40.5 45.5 42 49 44.5C52.5 42 52 40.5 50 38Z" fill="#ffffff"/>
+          <path d="M48 42C44.5 40 43 43.5 48.5 44.5Z" fill="#ffffff"/>
+          <path d="M52 42C55.5 40 57 43.5 51.5 44.5Z" fill="#ffffff"/>
+          <path d="M39 44C39 42.5 61 42.5 61 44V51.5C61 53.5 39 53.5 39 51.5Z" fill="#ffffff" fill-opacity="0.2" stroke="#ffffff" stroke-width="1.8"/>
+          <path d="M39 44C39 45.5 61 45.5 61 44" stroke="#ffffff" stroke-width="1.8"/>
+          <path d="M39.5 48.5C42.5 51 45.5 51 48.5 48.5C51.5 51 54.5 51 57.5 48.5C59.5 50 60.5 49.5 60.5 48.5" stroke="#ffffff" stroke-width="1.8" stroke-linecap="round" fill="none"/>
+          <path d="M34.5 51C34.5 49 65.5 49 65.5 51V60.5C65.5 63 34.5 63 34.5 60.5Z" fill="#ffffff" fill-opacity="0.2" stroke="#ffffff" stroke-width="1.8"/>
+          <path d="M34.5 51C34.5 53 65.5 53 65.5 51" stroke="#ffffff" stroke-width="1.8"/>
+          <path d="M35 56.5C39 60 43.5 60 48 56.5C52.5 60 57 60 61 56.5C63.5 58.5 65 57.5 65 56.5" stroke="#ffffff" stroke-width="1.8" stroke-linecap="round" fill="none"/>
+          <path d="M29.5 59.5C29.5 57 70.5 57 70.5 59.5V70C70.5 73.5 29.5 73.5 29.5 70Z" fill="#ffffff" fill-opacity="0.2" stroke="#ffffff" stroke-width="1.8"/>
+          <path d="M29.5 59.5C29.5 62 70.5 62 70.5 59.5" stroke="#ffffff" stroke-width="1.8"/>
+          <path d="M30 65C35 70 41 70 47.5 65C54 70 60 70 65 65C68 67.5 70 66.5 70 65" stroke="#ffffff" stroke-width="1.8" stroke-linecap="round" fill="none"/>
+          <path d="M27 72C27 70 73 70 73 72C73 74.5 27 74.5 27 72Z" fill="#ffffff" fill-opacity="0.4" stroke="#ffffff" stroke-width="1.6"/>
+          <path d="M25 75C25 73 75 73 75 75C75 77.5 25 77.5 25 75Z" fill="#ffffff" fill-opacity="0.6" stroke="#ffffff" stroke-width="1.6"/>
+        </svg>
+      </div>
+      <span class="brand-name">Crumb &amp; <span>Cocoa</span></span>
+    </a>
+    <ul class="nav-menu">
+      <li><a href="../index.html" class="nav-link">Home</a></li>
+      <li><a href="about.html" class="nav-link active">About</a></li>
+      <li><a href="services.html" class="nav-link">Services</a></li>
+      <li><a href="blog.html" class="nav-link">Blog</a></li>
+      <li><a href="contact.html" class="nav-link">Contact</a></li>
+    </ul>
+    <div class="nav-actions">
+      <button class="nav-icon-btn" onclick="window.CrumbCocoa.RTLManager.toggle()" title="Toggle RTL" aria-label="Toggle RTL" style="font-size: 0.78rem; font-weight: 550;">RTL</button>
+      <button class="nav-icon-btn" onclick="window.CrumbCocoa.ThemeManager.toggle()" title="Toggle Theme" aria-label="Toggle theme"><i class="theme-toggle-icon fas fa-moon"></i></button>
+    </div>
+    <button class="hamburger" aria-label="Open menu"><span></span><span></span><span></span></button>
+  </nav>
+</header>
+
+<div class="mobile-menu" role="dialog" aria-modal="true">
+  <button class="mobile-close" aria-label="Close menu"><i class="fas fa-times"></i></button>
+  <a href="../index.html" class="nav-link">Home</a>
+  <a href="about.html" class="nav-link active">About</a>
+  <a href="services.html" class="nav-link">Services</a>
+  <a href="blog.html" class="nav-link">Blog</a>
+  <a href="contact.html" class="nav-link">Contact</a>
+  <div class="mobile-menu-actions">
+    <div class="mobile-menu-row">
+      <button class="btn btn-ghost" onclick="window.CrumbCocoa.RTLManager.toggle()" style="font-weight: 550;">RTL</button>
+      <button class="btn btn-ghost" onclick="window.CrumbCocoa.ThemeManager.toggle()"><i class="theme-toggle-icon fas fa-moon"></i></button>
+    </div>
+  </div>
+</div>
+
+<!-- PAGE HEADER -->
+<div class="page-header">
+  <div class="page-header-container">
+    <div class="page-header-content">
+      <h1>Our Discovery Story</h1>
+      <p>From slow-fermented wild sourdough starters to single-origin chocolate confectionery, discover our mission to celebrate artisan bakers worldwide.</p>
+    </div>
+    <div class="page-header-image">
+      <img src="https://images.unsplash.com/photo-1509440159596-0249088772ff?q=80&w=800&auto=format&fit=crop" alt="Crumb &amp; Cocoa Artisan Bakehouse Exploration" />
+    </div>
+  </div>
+</div>
+
+<!-- ══ SECTION 1: MISSION & STORY ══ -->
+<section class="section" aria-label="Our mission">
+  <div class="container">
+    <div class="mission-grid">
+      <div class="animate-on-scroll" style="display: flex; flex-direction: column; justify-content: center; align-items: center; text-align: center;">
+        <span class="section-label">Our Mission</span>
+        <h2 class="section-title">Celebrating Sweet <em>Craftsmanship</em></h2>
+        <p style="margin-bottom:1.5rem;">Founded with a deep passion for culinary craftsmanship, Crumb &amp; Cocoa was created to bridge dessert connoisseurs with the finest artisan bakeries, heritage chocolatiers, and pastry ateliers across the globe. We believe that true baking is both science and art — where heirloom grains, cold-fermented levains, and ethical single-origin cocoa come together to create transformative culinary experiences.</p>
+        <div class="about-actions" style="display:flex;gap:1rem;flex-wrap:wrap;justify-content:center;">
+          <a href="services.html" class="btn btn-primary"><i class="fas fa-compass"></i> Explore Curated Collections</a>
+        </div>
+      </div>
+      <div class="mission-image animate-on-scroll delay-2">
+        <img src="https://images.unsplash.com/photo-1517433670267-08bbd4be890f?q=80&w=800&auto=format&fit=crop" alt="Artisan baker shaping fresh sourdough in bakehouse" loading="lazy" />
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══ SECTION 2: STATS + VALUES ══ -->
+<section class="section bg-secondary-section" aria-label="Our values and stats">
+  <div class="container">
+    <div class="text-center animate-on-scroll">
+      <span class="section-label">Platform Impact</span>
+      <h2 class="section-title">Discovery By The Numbers</h2>
+    </div>
+    <div class="stats-grid" style="margin-bottom:5rem;">
+      <div class="stat-card animate-on-scroll delay-1">
+        <span class="stat-number" data-counter data-target="500" data-suffix="+">500+</span>
+        <div class="stat-label">Curated Bakeries</div>
+        <div class="stat-sublabel">Across Europe, the Americas &amp; Asia</div>
+      </div>
+      <div class="stat-card animate-on-scroll delay-2">
+        <span class="stat-number" data-counter data-target="2400" data-suffix="+">2,400+</span>
+        <div class="stat-label">Artisan Creations</div>
+        <div class="stat-sublabel">Viennoiserie, breads &amp; confections</div>
+      </div>
+      <div class="stat-card animate-on-scroll delay-3">
+        <span class="stat-number" data-counter data-target="180" data-suffix="+">180+</span>
+        <div class="stat-label">Master Pâtissiers</div>
+        <div class="stat-sublabel">Verified artisans with in-depth stories</div>
+      </div>
+      <div class="stat-card animate-on-scroll delay-4">
+        <span class="stat-number" data-counter data-target="50000" data-suffix="+">50,000+</span>
+        <div class="stat-label">Sweet Explorers</div>
+        <div class="stat-sublabel">Food lovers discovering daily treats</div>
+      </div>
+    </div>
+
+    <div class="text-center animate-on-scroll" style="margin-bottom:2.5rem;">
+      <span class="section-label">Our Values</span>
+      <h2 class="section-title">What Guides Our Curation</h2>
+    </div>
+    <div class="values-grid">
+      <!-- Value 1 -->
+      <div class="value-card animate-on-scroll delay-1">
+        <div class="value-card-img-wrapper">
+          <img src="https://images.unsplash.com/photo-1555507036-ab1f4038808a?q=80&w=800&auto=format&fit=crop" alt="Artisanal Excellence" class="value-card-img" />
+        </div>
+        <div class="value-card-content">
+          <h3>Artisan Excellence</h3>
+          <p>We spotlight bakehouses that honor slow fermentation, 72-hour butter lamination, and small-batch dedication over mass production.</p>
+        </div>
+      </div>
+      <!-- Value 2 -->
+      <div class="value-card animate-on-scroll delay-2">
+        <div class="value-card-img-wrapper">
+          <img src="https://images.unsplash.com/photo-1548907040-4baa42d10919?q=80&w=800&auto=format&fit=crop" alt="Ethical Sourcing" class="value-card-img" />
+        </div>
+        <div class="value-card-content">
+          <h3>Ethical Sourcing</h3>
+          <p>We champion direct-trade single-origin cocoa, unbleached stone-milled grains, and high-butterfat European dairy without additives.</p>
+        </div>
+      </div>
+      <!-- Value 3 -->
+      <div class="value-card animate-on-scroll delay-3">
+        <div class="value-card-img-wrapper">
+          <img src="https://images.unsplash.com/photo-1509440159596-0249088772ff?q=80&w=800&auto=format&fit=crop" alt="Sensory Transparency" class="value-card-img" />
+        </div>
+        <div class="value-card-content">
+          <h3>Sensory Transparency</h3>
+          <p>Every profile features detailed tasting notes, fermentation hours, allergen disclosures, and honest sensory reviews from our curators.</p>
+        </div>
+      </div>
+      <!-- Value 4 -->
+      <div class="value-card animate-on-scroll delay-4">
+        <div class="value-card-img-wrapper">
+          <img src="https://images.unsplash.com/photo-1501339847302-ac426a4a7cbb?q=80&w=800&auto=format&fit=crop" alt="Community &amp; Culture" class="value-card-img" />
+        </div>
+        <div class="value-card-content">
+          <h3>Community &amp; Culture</h3>
+          <p>Empowering dessert enthusiasts to discover neighborhood ateliers, follow live baking drop timers, and support independent creators.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══ SECTION 3: TEAM ══ -->
+<section class="section" aria-label="Our team">
+  <div class="container">
+    <div class="text-center animate-on-scroll">
+      <span class="section-label">Curators &amp; Pastry Experts</span>
+      <h2 class="section-title">Meet Our Editorial Team</h2>
+      <p class="section-desc">Seasoned pastry chefs, culinary journalists, and master chocolatiers dedicated to uncovering the world's most delicious bakehouse creations.</p>
+    </div>
+    <div class="team-grid about-team-grid">
+      <!-- Team 1 -->
+      <div class="team-card animate-on-scroll delay-1">
+        <div class="team-avatar">
+          <img src="https://images.unsplash.com/photo-1583394293214-28ded15ee548?w=300&q=80&auto=format&fit=crop" alt="Kavya Sundaram" loading="lazy" />
+          <div class="team-social">
+            <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+            <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+          </div>
+        </div>
+        <h3 class="team-name">Kavya Sundaram</h3>
+        <div class="team-role">Founder &amp; Chief Curator</div>
+        <p class="team-desc">Culinary Institute graduate with 15+ years evaluating bespoke pastries, celebration tier cakes, and confectionery artistry.</p>
+      </div>
+      <!-- Team 2 -->
+      <div class="team-card animate-on-scroll delay-2">
+        <div class="team-avatar">
+          <img src="https://images.unsplash.com/photo-1577219491135-ce391730fb2c?w=300&q=80&auto=format&fit=crop" alt="Chef Antoine Laurent" loading="lazy" />
+          <div class="team-social">
+            <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+            <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+          </div>
+        </div>
+        <h3 class="team-name">Chef Antoine Laurent</h3>
+        <div class="team-role">Head of Viennoiserie Curation</div>
+        <p class="team-desc">Parisian master baker specializing in European lamination heritage, butter honeycomb crusts, and morning pastry drops.</p>
+      </div>
+      <!-- Team 3 -->
+      <div class="team-card animate-on-scroll delay-3">
+        <div class="team-avatar">
+          <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=300&q=80&auto=format&fit=crop" alt="Julian Moreau" loading="lazy" />
+          <div class="team-social">
+            <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+            <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+          </div>
+        </div>
+        <h3 class="team-name">Julian Moreau</h3>
+        <div class="team-role">Master Chocolatier &amp; Cocoa Lead</div>
+        <p class="team-desc">Bean-to-bar cocoa explorer evaluating micro-batch roasting, silk ganache tempering, and delicate Parisian macarons.</p>
+      </div>
+      <!-- Team 4 -->
+      <div class="team-card animate-on-scroll delay-4">
+        <div class="team-avatar">
+          <img src="https://images.unsplash.com/photo-1544005313-94ddf0286df2?w=300&q=80&auto=format&fit=crop" alt="Elena Rostova" loading="lazy" />
+          <div class="team-social">
+            <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+            <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+          </div>
+        </div>
+        <h3 class="team-name">Elena Rostova</h3>
+        <div class="team-role">Sourdough &amp; Bread Specialist</div>
+        <p class="team-desc">Specializes in ancient grain heritage, sourdough levain hydration physics, and rustic stone-deck artisan boules.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA -->
+<section class="cta-banner"><div class="container">
+  <span class="section-label" style="color:var(--accent)">Start Exploring</span>
+  <h2>Ready to Discover Extraordinary Treats?</h2>
+  <p>Search our global directory of verified artisan bakeries, read behind-the-scenes baker profiles, and plan your next sweet adventure.</p>
+  <div class="cta-actions">
+    <a href="services.html" class="btn btn-accent btn-lg"><i class="fas fa-compass"></i> Explore Collections</a>
+    <a href="contact.html" class="btn btn-ghost btn-lg"><i class="fas fa-paper-plane"></i> Recommend a Bakery</a>
+  </div>
+</div></section>
+
+<footer class="footer">
+  <div class="footer-grid">
+    <div class="footer-brand">
+      <a href="../index.html" class="brand" style="text-decoration: none; margin-bottom: 1.5rem; display: inline-flex; align-items: center;">
+        <div class="brand-logo">
+          <svg viewBox="16 26 68 54" fill="none" xmlns="http://www.w3.org/2000/svg" style="width:33px; height:33px; display:block;">
+            <path d="M26 44Q28.5 44 28.5 41.5Q28.5 44 31 44Q28.5 44 28.5 46.5Q28.5 44 26 44Z" fill="#ffffff"/>
+            <path d="M20 54Q22.5 54 22.5 51.5Q22.5 54 25 54Q22.5 54 22.5 56.5Q22.5 54 20 54Z" fill="#ffffff"/>
+            <path d="M41 38Q43 38 43 36Q43 38 45 38Q43 38 43 40Q43 38 41 38Z" fill="#ffffff"/>
+            <path d="M55 38Q57 38 57 36Q57 38 59 38Q57 38 57 40Q57 38 55 38Z" fill="#ffffff"/>
+            <path d="M69 44Q71.5 44 71.5 41.5Q71.5 44 74 44Q71.5 44 71.5 46.5Q71.5 44 69 44Z" fill="#ffffff"/>
+            <path d="M75 54Q77.5 54 77.5 51.5Q77.5 54 80 54Q77.5 54 77.5 56.5Q77.5 54 75 54Z" fill="#ffffff"/>
+            <circle cx="37" cy="41" r="1" fill="#ffffff"/>
+            <circle cx="63" cy="41" r="1" fill="#ffffff"/>
+            <circle cx="32" cy="50" r="1" fill="#ffffff"/>
+            <circle cx="68" cy="50" r="1" fill="#ffffff"/>
+            <path d="M50 31C49 33 48.5 35 50 37.5C51.5 35 51 33 50 31Z" fill="#ffffff"/>
+            <path d="M50 38C48 40.5 45.5 42 49 44.5C52.5 42 52 40.5 50 38Z" fill="#ffffff"/>
+            <path d="M48 42C44.5 40 43 43.5 48.5 44.5Z" fill="#ffffff"/>
+            <path d="M52 42C55.5 40 57 43.5 51.5 44.5Z" fill="#ffffff"/>
+            <path d="M39 44C39 42.5 61 42.5 61 44V51.5C61 53.5 39 53.5 39 51.5Z" fill="#ffffff" fill-opacity="0.2" stroke="#ffffff" stroke-width="1.8"/>
+            <path d="M39 44C39 45.5 61 45.5 61 44" stroke="#ffffff" stroke-width="1.8"/>
+            <path d="M39.5 48.5C42.5 51 45.5 51 48.5 48.5C51.5 51 54.5 51 57.5 48.5C59.5 50 60.5 49.5 60.5 48.5" stroke="#ffffff" stroke-width="1.8" stroke-linecap="round" fill="none"/>
+            <path d="M34.5 51C34.5 49 65.5 49 65.5 51V60.5C65.5 63 34.5 63 34.5 60.5Z" fill="#ffffff" fill-opacity="0.2" stroke="#ffffff" stroke-width="1.8"/>
+            <path d="M34.5 51C34.5 53 65.5 53 65.5 51" stroke="#ffffff" stroke-width="1.8"/>
+            <path d="M35 56.5C39 60 43.5 60 48 56.5C52.5 60 57 60 61 56.5C63.5 58.5 65 57.5 65 56.5" stroke="#ffffff" stroke-width="1.8" stroke-linecap="round" fill="none"/>
+            <path d="M29.5 59.5C29.5 57 70.5 57 70.5 59.5V70C70.5 73.5 29.5 73.5 29.5 70Z" fill="#ffffff" fill-opacity="0.2" stroke="#ffffff" stroke-width="1.8"/>
+            <path d="M29.5 59.5C29.5 62 70.5 62 70.5 59.5" stroke="#ffffff" stroke-width="1.8"/>
+            <path d="M30 65C35 70 41 70 47.5 65C54 70 60 70 65 65C68 67.5 70 66.5 70 65" stroke="#ffffff" stroke-width="1.8" stroke-linecap="round" fill="none"/>
+            <path d="M27 72C27 70 73 70 73 72C73 74.5 27 74.5 27 72Z" fill="#ffffff" fill-opacity="0.4" stroke="#ffffff" stroke-width="1.6"/>
+            <path d="M25 75C25 73 75 73 75 75C75 77.5 25 77.5 25 75Z" fill="#ffffff" fill-opacity="0.6" stroke="#ffffff" stroke-width="1.6"/>
+          </svg>
+        </div>
+        <span class="brand-name">Crumb &amp; <span>Cocoa</span></span>
+      </a>
+      <p class="footer-desc">The premier discovery and exploration platform celebrating artisan bakeries, handcrafted pastries, fine chocolates, and sweet craftsmanship around the world.</p>
+      <div class="social-links">
+        <a href="#" class="social-link" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+        <a href="#" class="social-link" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+        <a href="#" class="social-link" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+        <a href="#" class="social-link" aria-label="Pinterest"><i class="fab fa-pinterest-p"></i></a>
+      </div>
+    </div>
+    <div><h4 class="footer-heading">Explore</h4><ul class="footer-links"><li><a href="../index.html" class="footer-link">Home</a></li><li><a href="about.html" class="footer-link">Our Discovery Mission</a></li><li><a href="services.html" class="footer-link">Collections &amp; Guides</a></li><li><a href="blog.html" class="footer-link">Baking Stories &amp; Journal</a></li><li><a href="contact.html" class="footer-link">Submit a Bakery</a></li></ul></div>
+    <div><h4 class="footer-heading">Collections</h4><ul class="footer-links"><li><a href="services.html" class="footer-link">French Viennoiserie</a></li><li><a href="services.html" class="footer-link">Wild Yeast Sourdough</a></li><li><a href="services.html" class="footer-link">Artisan Chocolates</a></li><li><a href="services.html" class="footer-link">Celebration Cakes</a></li><li><a href="services.html" class="footer-link">Seasonal Treat Boxes</a></li></ul></div>
+    <div><h4 class="footer-heading">Discovery Hub</h4><ul class="footer-links"><li><a href="tel:+18002786226" class="footer-link"><i class="fas fa-phone" style="width:16px;color:var(--accent)"></i> +1 (800) CRUMB-CO</a></li><li><a href="mailto:hello@crumbcocoa.com" class="footer-link"><i class="fas fa-envelope" style="width:16px;color:var(--accent)"></i> hello@crumbcocoa.com</a></li><li><a href="#" class="footer-link"><i class="fas fa-map-marker-alt" style="width:16px;color:var(--accent)"></i> Global Bakery Collective</a></li><li><a href="#" class="footer-link"><i class="fas fa-clock" style="width:16px;color:var(--accent)"></i> Daily Discovery Drops: 7AM EST</a></li></ul></div>
+  </div>
+  <div class="footer-bottom"><p>&copy; 2026 Crumb &amp; Cocoa. All rights reserved. Artisan Bakery &amp; Confectionery Discovery Platform.</p><div class="footer-bottom-links"><a href="#">Privacy Policy</a><a href="#">Terms of Discovery</a><a href="#">Artisan Certification</a></div></div>
+</footer>
+<button class="back-to-top" aria-label="Back to top"><i class="fas fa-chevron-up"></i></button>
+<script src="../assets/js/main.js"></script>
+
+</body>
+</html>

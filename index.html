@@ -1,0 +1,593 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description"
+    content="Crumb &amp; Cocoa — Discover premier artisan bakeries, handcrafted pastries, fine chocolates, gourmet croissants, and bespoke confections worldwide." />
+  <meta name="keywords"
+    content="bakery discovery, artisan bakeries, fine confectionery, pastries, croissants, sourdough breads, chocolates, macarons, custom celebration cakes" />
+  <title>Crumb &amp; Cocoa — Bakery &amp; Confectionery Discovery Platform</title>
+  <link rel="icon"
+    href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🥐</text></svg>">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/style.css" />
+  <link rel="stylesheet" href="assets/css/dark-mode.css" />
+  <link id="rtl-stylesheet" rel="stylesheet" href="assets/css/rtl.css" disabled />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+</head>
+
+<body>
+
+  <!-- ══ HEADER ══ -->
+  <header class="header" id="header">
+    <nav class="nav-container">
+      <!-- Brand -->
+      <a href="index.html" class="brand">
+        <div class="brand-logo">
+          <svg viewBox="16 26 68 54" fill="none" xmlns="http://www.w3.org/2000/svg"
+            style="width:33px; height:33px; display:block;">
+            <path d="M26 44Q28.5 44 28.5 41.5Q28.5 44 31 44Q28.5 44 28.5 46.5Q28.5 44 26 44Z" fill="#ffffff" />
+            <path d="M20 54Q22.5 54 22.5 51.5Q22.5 54 25 54Q22.5 54 22.5 56.5Q22.5 54 20 54Z" fill="#ffffff" />
+            <path d="M41 38Q43 38 43 36Q43 38 45 38Q43 38 43 40Q43 38 41 38Z" fill="#ffffff" />
+            <path d="M55 38Q57 38 57 36Q57 38 59 38Q57 38 57 40Q57 38 55 38Z" fill="#ffffff" />
+            <path d="M69 44Q71.5 44 71.5 41.5Q71.5 44 74 44Q71.5 44 71.5 46.5Q71.5 44 69 44Z" fill="#ffffff" />
+            <path d="M75 54Q77.5 54 77.5 51.5Q77.5 54 80 54Q77.5 54 77.5 56.5Q77.5 54 75 54Z" fill="#ffffff" />
+            <circle cx="37" cy="41" r="1" fill="#ffffff" />
+            <circle cx="63" cy="41" r="1" fill="#ffffff" />
+            <circle cx="32" cy="50" r="1" fill="#ffffff" />
+            <circle cx="68" cy="50" r="1" fill="#ffffff" />
+            <path d="M50 31C49 33 48.5 35 50 37.5C51.5 35 51 33 50 31Z" fill="#ffffff" />
+            <path d="M50 38C48 40.5 45.5 42 49 44.5C52.5 42 52 40.5 50 38Z" fill="#ffffff" />
+            <path d="M48 42C44.5 40 43 43.5 48.5 44.5Z" fill="#ffffff" />
+            <path d="M52 42C55.5 40 57 43.5 51.5 44.5Z" fill="#ffffff" />
+            <path d="M39 44C39 42.5 61 42.5 61 44V51.5C61 53.5 39 53.5 39 51.5Z" fill="#ffffff" fill-opacity="0.2"
+              stroke="#ffffff" stroke-width="1.8" />
+            <path d="M39 44C39 45.5 61 45.5 61 44" stroke="#ffffff" stroke-width="1.8" />
+            <path d="M39.5 48.5C42.5 51 45.5 51 48.5 48.5C51.5 51 54.5 51 57.5 48.5C59.5 50 60.5 49.5 60.5 48.5"
+              stroke="#ffffff" stroke-width="1.8" stroke-linecap="round" fill="none" />
+            <path d="M34.5 51C34.5 49 65.5 49 65.5 51V60.5C65.5 63 34.5 63 34.5 60.5Z" fill="#ffffff" fill-opacity="0.2"
+              stroke="#ffffff" stroke-width="1.8" />
+            <path d="M34.5 51C34.5 53 65.5 53 65.5 51" stroke="#ffffff" stroke-width="1.8" />
+            <path d="M35 56.5C39 60 43.5 60 48 56.5C52.5 60 57 60 61 56.5C63.5 58.5 65 57.5 65 56.5" stroke="#ffffff"
+              stroke-width="1.8" stroke-linecap="round" fill="none" />
+            <path d="M29.5 59.5C29.5 57 70.5 57 70.5 59.5V70C70.5 73.5 29.5 73.5 29.5 70Z" fill="#ffffff"
+              fill-opacity="0.2" stroke="#ffffff" stroke-width="1.8" />
+            <path d="M29.5 59.5C29.5 62 70.5 62 70.5 59.5" stroke="#ffffff" stroke-width="1.8" />
+            <path d="M30 65C35 70 41 70 47.5 65C54 70 60 70 65 65C68 67.5 70 66.5 70 65" stroke="#ffffff"
+              stroke-width="1.8" stroke-linecap="round" fill="none" />
+            <path d="M27 72C27 70 73 70 73 72C73 74.5 27 74.5 27 72Z" fill="#ffffff" fill-opacity="0.4" stroke="#ffffff"
+              stroke-width="1.6" />
+            <path d="M25 75C25 73 75 73 75 75C75 77.5 25 77.5 25 75Z" fill="#ffffff" fill-opacity="0.6" stroke="#ffffff"
+              stroke-width="1.6" />
+          </svg>
+        </div>
+        <span class="brand-name">Crumb &amp; <span>Cocoa</span></span>
+      </a>
+
+      <!-- Desktop Nav -->
+      <ul class="nav-menu">
+        <li><a href="index.html" class="nav-link active">Home</a></li>
+        <li><a href="pages/about.html" class="nav-link">About</a></li>
+        <li><a href="pages/services.html" class="nav-link">Services</a></li>
+        <li><a href="pages/blog.html" class="nav-link">Blog</a></li>
+        <li><a href="pages/contact.html" class="nav-link">Contact</a></li>
+      </ul>
+
+      <!-- Desktop Actions -->
+      <div class="nav-actions">
+        <button class="nav-icon-btn" onclick="window.CrumbCocoa.RTLManager.toggle()" title="Toggle RTL"
+          aria-label="Toggle RTL" style="font-size: 0.78rem; font-weight: 550;">RTL</button>
+        <button class="nav-icon-btn" onclick="window.CrumbCocoa.ThemeManager.toggle()" title="Toggle Theme"
+          aria-label="Toggle theme">
+          <i class="theme-toggle-icon fas fa-moon"></i>
+        </button>
+      </div>
+
+      <!-- Hamburger (mobile) -->
+      <button class="hamburger" aria-label="Open menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </nav>
+  </header>
+
+  <!-- Mobile Menu Overlay -->
+  <div class="mobile-menu" role="dialog" aria-modal="true">
+    <button class="mobile-close" aria-label="Close menu"><i class="fas fa-times"></i></button>
+    <a href="index.html" class="nav-link active">Home</a>
+    <a href="pages/about.html" class="nav-link">About</a>
+    <a href="pages/services.html" class="nav-link">Services</a>
+    <a href="pages/blog.html" class="nav-link">Blog</a>
+    <a href="pages/contact.html" class="nav-link">Contact</a>
+    <div class="mobile-menu-actions">
+      <div class="mobile-menu-row">
+        <button class="btn btn-ghost" onclick="window.CrumbCocoa.RTLManager.toggle()" style="font-weight: 550;">RTL</button>
+        <button class="btn btn-ghost" onclick="window.CrumbCocoa.ThemeManager.toggle()"><i
+            class="theme-toggle-icon fas fa-moon"></i></button>
+      </div>
+    </div>
+  </div>
+
+  <!-- ══ SECTION 1: HERO ══ -->
+  <section class="hero" aria-label="Hero">
+    <div class="hero-bg">
+      <img
+        src="https://images.unsplash.com/photo-1509440159596-0249088772ff?q=80&w=1600&auto=format&fit=crop"
+        alt="Artisan bakery counter with golden crusty breads, pastries, and flour" loading="eager" />
+    </div>
+    <div class="hero-overlay"></div>
+    <div class="hero-particles"></div>
+
+    <div class="hero-container">
+      <div class="hero-content">
+        <div class="hero-badge">
+          <i class="fas fa-compass"></i>
+          <span>Bakery &amp; Confectionery Discovery Platform</span>
+        </div>
+        <h1 class="hero-title">
+          Discover Artisan Bakes
+          <span class="accent-text">&amp; Sweet Creations</span>
+        </h1>
+        <p class="hero-desc">
+          Explore premier artisan bakeries, hand-laminated French pastries, single-origin chocolates, and bespoke celebration cakes crafted by master confectioners.
+        </p>
+        <div class="hero-actions">
+          <a href="pages/services.html" class="btn btn-primary btn-lg">
+            <i class="fas fa-compass"></i> Explore Collections
+          </a>
+          <a href="pages/about.html" class="btn btn-ghost btn-lg">
+            <i class="fas fa-cookie-bite"></i> Our Discovery Story
+          </a>
+        </div>
+        <div class="hero-stats">
+          <div class="hero-stat">
+            <span class="hero-stat-number"><span data-counter data-target="500" data-suffix="+">500+</span></span>
+            <span class="hero-stat-label">Curated Bakeries</span>
+          </div>
+          <div class="hero-stat">
+            <span class="hero-stat-number"><span data-counter data-target="2400" data-suffix="+">2,400+</span></span>
+            <span class="hero-stat-label">Artisan Treats</span>
+          </div>
+          <div class="hero-stat">
+            <span class="hero-stat-number"><span data-counter data-target="180" data-suffix="+">180+</span></span>
+            <span class="hero-stat-label">Master Bakers</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══ SECTION 2: FEATURES ══ -->
+  <section class="section bg-secondary-section" aria-label="Why choose us">
+    <div class="container">
+      <div class="text-center animate-on-scroll">
+        <span class="section-label">Exploration &amp; Craft</span>
+        <h2 class="section-title">Where Passion Meets <em>Artistry</em></h2>
+        <p class="section-desc">We connect dessert enthusiasts and food lovers with verified artisan bakeries, heritage confectioners, and sweet craftspeople.</p>
+      </div>
+      <div class="features-grid">
+        <div class="feature-card animate-on-scroll delay-1">
+          <div class="feature-card-img-wrapper">
+            <img src="https://images.unsplash.com/photo-1517433670267-08bbd4be890f?q=80&w=800&auto=format&fit=crop" alt="Curated Artisan Bakeries"
+              class="feature-card-img" />
+          </div>
+          <div class="feature-card-content">
+            <div class="feature-icon"><i class="fas fa-store"></i></div>
+            <h3>Curated Artisan Bakeries</h3>
+            <p>Discover independent sourdough ateliers, traditional boulangeries, and neighborhood patisseries handpicked for their craft and authenticity.</p>
+          </div>
+        </div>
+        <div class="feature-card animate-on-scroll delay-2">
+          <div class="feature-card-img-wrapper">
+            <img src="https://images.unsplash.com/photo-1549931319-a545dcf3bc73?q=80&w=800&auto=format&fit=crop" alt="Heritage Sourdough &amp; Breads"
+              class="feature-card-img" />
+          </div>
+          <div class="feature-card-content">
+            <div class="feature-icon"><i class="fas fa-bread-slice"></i></div>
+            <h3>Heritage Sourdough &amp; Breads</h3>
+            <p>Explore naturally fermented sourdough boules, stone-baked French baguettes, and ancient-grain loaves with crisp crusts and airy crumbs.</p>
+          </div>
+        </div>
+        <div class="feature-card animate-on-scroll delay-3">
+          <div class="feature-card-img-wrapper">
+            <img src="https://images.unsplash.com/photo-1548907040-4baa42d10919?q=80&w=800&auto=format&fit=crop" alt="Chocolates &amp; Fine Confections"
+              class="feature-card-img" />
+          </div>
+          <div class="feature-card-content">
+            <div class="feature-icon"><i class="fas fa-candy-cane"></i></div>
+            <h3>Chocolates &amp; Fine Confections</h3>
+            <p>Uncover single-origin bean-to-bar chocolates, hand-piped macarons, velvety pralines, and traditional heritage fudges from master confectioners.</p>
+          </div>
+        </div>
+        <div class="feature-card animate-on-scroll delay-4">
+          <div class="feature-card-img-wrapper">
+            <img src="https://images.unsplash.com/photo-1563729784474-d77dbb933a9e?q=80&w=800&auto=format&fit=crop" alt="Seasonal Sweet Collections"
+              class="feature-card-img" />
+          </div>
+          <div class="feature-card-content">
+            <div class="feature-icon"><i class="fas fa-gift"></i></div>
+            <h3>Seasonal Sweet Collections</h3>
+            <p>Discover limited holiday dessert releases, autumn spiced fruit tarts, spring floral confections, and bespoke tasting gift boxes.</p>
+          </div>
+        </div>
+        <div class="feature-card animate-on-scroll delay-5">
+          <div class="feature-card-img-wrapper">
+            <img src="https://images.unsplash.com/photo-1535141192574-5d4897c13136?q=80&w=800&auto=format&fit=crop"
+              alt="Celebration &amp; Signature Cakes" class="feature-card-img" />
+          </div>
+          <div class="feature-card-content">
+            <div class="feature-icon"><i class="fas fa-birthday-cake"></i></div>
+            <h3>Celebration &amp; Signature Cakes</h3>
+            <p>Explore architecturally tiered wedding cakes, delicate mirror-glaze entremets, and bespoke celebration creations customized for milestones.</p>
+          </div>
+        </div>
+        <div class="feature-card animate-on-scroll delay-1">
+          <div class="feature-card-img-wrapper">
+            <img
+              src="https://images.unsplash.com/photo-1501339847302-ac426a4a7cbb?q=80&w=800&auto=format&fit=crop"
+              alt="Baker Stories &amp; Techniques" class="feature-card-img" />
+          </div>
+          <div class="feature-card-content">
+            <div class="feature-icon"><i class="fas fa-book-open"></i></div>
+            <h3>Baker Stories &amp; Techniques</h3>
+            <p>Learn about slow cold fermentation, lamination physics, bean roasting origins, and the culinary secrets behind signature bakehouse treats.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══ SECTION 3: MENU COLLECTIONS ══ -->
+  <section class="section" aria-label="Featured classes">
+    <div class="container">
+      <div class="text-center animate-on-scroll">
+        <span class="section-label">Signature Discoveries</span>
+        <h2 class="section-title">Explore Featured Collections</h2>
+        <p class="section-desc">From time-honored traditional confections to freshly laminated French pastries, discover the perfect delicacy for every sweet craving.</p>
+      </div>
+      <div class="classes-grid home-classes-grid">
+        <!-- French Viennoiserie -->
+        <div class="class-card animate-on-scroll delay-1">
+          <div class="class-card-img">
+            <img src="https://images.unsplash.com/photo-1555507036-ab1f4038808a?q=80&w=800&auto=format&fit=crop" alt="French Viennoiserie &amp; Pastries"
+              loading="lazy" />
+            <span class="class-badge">French Viennoiserie</span>
+          </div>
+          <div class="class-card-body">
+            <h3>Artisan Croissants &amp; Pastries</h3>
+            <p>Multi-layered golden butter croissants, pain au chocolat, delicate fruit tarts, and flaky morning danishes crafted fresh by master bakers.</p>
+            <div class="class-meta">
+              <span><i class="fas fa-layer-group"></i> 72h Lamination</span>
+              <span><i class="fas fa-check"></i> Pure Normandy Butter</span>
+              <span><i class="fas fa-sun"></i> Baked Every Morning</span>
+            </div>
+            <div class="class-level">
+              <div class="level-dot filled"></div>
+              <div class="level-dot filled"></div>
+              <div class="level-dot filled"></div>
+              <div class="level-dot filled"></div>
+              <div class="level-dot filled"></div>
+            </div>
+            <div class="class-footer">
+              <span class="class-price">Featured Collection</span>
+              <a href="pages/services.html" class="btn btn-primary btn-sm">Explore Pastries</a>
+            </div>
+          </div>
+        </div>
+        <!-- Fine Chocolates & Macarons -->
+        <div class="class-card animate-on-scroll delay-2">
+          <div class="class-card-img">
+            <img
+              src="https://images.unsplash.com/photo-1569864358642-9d1684040f43?q=80&w=800&auto=format&fit=crop"
+              alt="Fine Chocolates &amp; Macarons" loading="lazy" />
+            <span class="class-badge">Artisan Chocolates</span>
+          </div>
+          <div class="class-card-body">
+            <h3>Fine Confectionery &amp; Macarons</h3>
+            <p>Delicate Parisian macarons, bean-to-bar single-origin dark chocolate truffles, hazelnut pralines, and hand-dipped fruit confections.</p>
+            <div class="class-meta">
+              <span><i class="fas fa-candy-cane"></i> Single-Origin Cocoa</span>
+              <span><i class="fas fa-cookie"></i> Hand-Piped Shells</span>
+              <span><i class="fas fa-leaf"></i> Natural Infusions</span>
+            </div>
+            <div class="class-level">
+              <div class="level-dot filled"></div>
+              <div class="level-dot filled"></div>
+              <div class="level-dot filled"></div>
+              <div class="level-dot filled"></div>
+              <div class="level-dot"></div>
+            </div>
+            <div class="class-footer">
+              <span class="class-price">Confectioner Highlights</span>
+              <a href="pages/services.html" class="btn btn-primary btn-sm">Explore Sweets</a>
+            </div>
+          </div>
+        </div>
+        <!-- Sourdough & Rustic Breads -->
+        <div class="class-card animate-on-scroll delay-3">
+          <div class="class-card-img">
+            <img src="https://images.unsplash.com/photo-1509440159596-0249088772ff?q=80&w=800&auto=format&fit=crop"
+              alt="Rustic Crusts &amp; Sourdough" loading="lazy" />
+            <span class="class-badge">Wild Ferment</span>
+          </div>
+          <div class="class-card-body">
+            <h3>Rustic Crusts &amp; Sourdough</h3>
+            <p>Open-crumb sourdough boules, seeded rye batards, and crispy baguettes leavened with decades-old heritage starters and stone-milled flour.</p>
+            <div class="class-meta">
+              <span><i class="fas fa-bread-slice"></i> Wild Yeast Starter</span>
+              <span><i class="fas fa-fire"></i> Stone-Deck Baked</span>
+              <span><i class="fas fa-tint"></i> 80% Hydration</span>
+            </div>
+            <div class="class-level">
+              <div class="level-dot filled"></div>
+              <div class="level-dot filled"></div>
+              <div class="level-dot filled"></div>
+              <div class="level-dot filled"></div>
+              <div class="level-dot filled"></div>
+            </div>
+            <div class="class-footer">
+              <span class="class-price">Artisan Breads</span>
+              <a href="pages/services.html" class="btn btn-primary btn-sm">Explore Breads</a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="text-center" style="margin-top:3rem;">
+        <a href="pages/services.html" class="btn btn-secondary btn-lg">Browse All Collections <i
+            class="fas fa-arrow-right"></i></a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══ SECTION 4: SHOWCASE / GALLERY ══ -->
+  <section class="section bg-secondary-section" aria-label="Bakery showcase">
+    <div class="container-lg">
+      <div class="text-center animate-on-scroll">
+        <span class="section-label">Visual Discovery</span>
+        <h2 class="section-title">A Feast for the Senses</h2>
+        <p class="section-desc">Browse signature creations, behind-the-scenes bakery craftsmanship, and sweet highlights from featured ateliers around the world.</p>
+      </div>
+
+      <!-- Filter Buttons -->
+      <div style="display:flex;gap:0.75rem;justify-content:center;flex-wrap:wrap;margin-bottom:2rem;">
+        <button class="btn btn-primary btn-sm" data-filter="all">All Creations</button>
+        <button class="btn btn-secondary btn-sm" data-filter="pastries">Pastries &amp; Viennoiserie</button>
+        <button class="btn btn-secondary btn-sm" data-filter="confections">Chocolates &amp; Macarons</button>
+        <button class="btn btn-secondary btn-sm" data-filter="cakes">Artisan Cakes</button>
+        <button class="btn btn-secondary btn-sm" data-filter="breads">Sourdough &amp; Breads</button>
+      </div>
+
+      <div class="gallery-grid">
+        <div class="gallery-item" data-category="confections">
+          <img
+            src="https://images.unsplash.com/photo-1569864358642-9d1684040f43?q=80&w=800&auto=format&fit=crop"
+            alt="Hand-piped Parisian fruit macarons in assorted pastel colors" loading="lazy" />
+          <div class="gallery-item-overlay"><i class="fas fa-expand"></i></div>
+        </div>
+        <div class="gallery-item" data-category="cakes">
+          <img
+            src="https://images.unsplash.com/photo-1578985545062-69928b1d9587?q=80&w=800&auto=format&fit=crop"
+            alt="Decadent multi-layered dark chocolate truffle celebration cake" loading="lazy" />
+          <div class="gallery-item-overlay"><i class="fas fa-expand"></i></div>
+        </div>
+        <div class="gallery-item" data-category="pastries">
+          <img
+            src="https://images.unsplash.com/photo-1555507036-ab1f4038808a?q=80&w=800&auto=format&fit=crop"
+            alt="Golden flaky croissants and pain au chocolat in bakery display" loading="lazy" />
+          <div class="gallery-item-overlay"><i class="fas fa-expand"></i></div>
+        </div>
+        <div class="gallery-item" data-category="confections">
+          <img src="https://images.unsplash.com/photo-1548907040-4baa42d10919?q=80&w=800&auto=format&fit=crop"
+            alt="Handcrafted dark chocolate cocoa truffles on stone slab" loading="lazy" />
+          <div class="gallery-item-overlay"><i class="fas fa-expand"></i></div>
+        </div>
+        <div class="gallery-item" data-category="breads">
+          <img
+            src="https://images.unsplash.com/photo-1509440159596-0249088772ff?q=80&w=800&auto=format&fit=crop"
+            alt="Naturally fermented crusty sourdough loaf in bakehouse" loading="lazy" />
+          <div class="gallery-item-overlay"><i class="fas fa-expand"></i></div>
+        </div>
+        <div class="gallery-item" data-category="cakes">
+          <img
+            src="https://images.unsplash.com/photo-1535141192574-5d4897c13136?q=80&w=800&auto=format&fit=crop"
+            alt="Architectural multi-tiered floral wedding cake" loading="lazy" />
+          <div class="gallery-item-overlay"><i class="fas fa-expand"></i></div>
+        </div>
+        <div class="gallery-item" data-category="pastries">
+          <img
+            src="https://images.unsplash.com/photo-1486427944299-d1955d23e34d?q=80&w=800&auto=format&fit=crop"
+            alt="Delicious assortment of gourmet cupcakes with berry frosting" loading="lazy" />
+          <div class="gallery-item-overlay"><i class="fas fa-expand"></i></div>
+        </div>
+        <div class="gallery-item" data-category="breads">
+          <img src="https://images.unsplash.com/photo-1517433670267-08bbd4be890f?q=80&w=800&auto=format&fit=crop"
+            alt="Artisan baker scoring sourdough loaf before deck oven bake" loading="lazy" />
+          <div class="gallery-item-overlay"><i class="fas fa-expand"></i></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══ SECTION 5: TESTIMONIALS ══ -->
+  <section class="section" aria-label="Testimonials">
+    <div class="container">
+      <div class="text-center animate-on-scroll">
+        <span class="section-label">Explorer Voices</span>
+        <h2 class="section-title">What Connoisseurs Say</h2>
+        <p class="section-desc">Hear from culinary explorers, dessert writers, and pastry enthusiasts who discover rare treats through Crumb &amp; Cocoa.</p>
+      </div>
+      <div class="testimonials-grid">
+        <!-- Testimonial 1 -->
+        <div class="testimonial-card animate-on-scroll delay-1">
+          <div class="testimonial-stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i
+              class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
+          <p class="testimonial-text">"Crumb &amp; Cocoa opened my eyes to the incredible craftsmanship happening in small-batch bakeries. Their curation of viennoiserie and bean-to-bar chocolatiers is unmatched. An indispensable discovery guide for every sweet lover!"</p>
+          <div class="testimonial-author">
+            <div class="testimonial-avatar"><img
+                src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=200&q=80&auto=format&fit=crop"
+                alt="Elena Vance" loading="lazy" /></div>
+            <div>
+              <div class="testimonial-name">Elena Vance</div>
+              <div class="testimonial-role">Culinary Traveler &amp; Pastry Columnist</div>
+            </div>
+          </div>
+        </div>
+        <!-- Testimonial 2 -->
+        <div class="testimonial-card animate-on-scroll delay-2">
+          <div class="testimonial-stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i
+              class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
+          <p class="testimonial-text">"As an artisan chocolatier, being featured on Crumb &amp; Cocoa connected our atelier with connoisseurs who genuinely appreciate 72-hour stone-ground cocoa. The platform’s reverence for genuine craftsmanship is inspiring."</p>
+          <div class="testimonial-author">
+            <div class="testimonial-avatar"><img
+                src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=200&q=80&auto=format&fit=crop" alt="Julian Moreau"
+                loading="lazy" /></div>
+            <div>
+              <div class="testimonial-name">Julian Moreau</div>
+              <div class="testimonial-role">Master Chocolatier, Atelier Cacao</div>
+            </div>
+          </div>
+        </div>
+        <!-- Testimonial 3 -->
+        <div class="testimonial-card animate-on-scroll delay-3">
+          <div class="testimonial-stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i
+              class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i></div>
+          <p class="testimonial-text">"Whenever I visit a new city, Crumb &amp; Cocoa is the very first app I open. It has led me to secret sourdough bakeries, incredible cardamom buns, and world-class macarons that you'd never find on generic review sites."</p>
+          <div class="testimonial-author">
+            <div class="testimonial-avatar"><img
+                src="https://images.unsplash.com/photo-1544005313-94ddf0286df2?w=200&q=80&auto=format&fit=crop" alt="Sophia Thorne"
+                loading="lazy" /></div>
+            <div>
+              <div class="testimonial-name">Sophia Thorne</div>
+              <div class="testimonial-role">Dessert Blogger &amp; Food Photographer</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA Banner -->
+  <section class="cta-banner" aria-label="Call to action">
+    <div class="container">
+      <span class="section-label" style="color:var(--accent);">Start Your Sweet Journey</span>
+      <h2>Uncover Exceptional Bakeries &amp; Sweet Creators</h2>
+      <p>Join thousands of dessert enthusiasts discovering signature croissants, rare chocolates, and local bakeries every week. Explore curated collections or submit your favorite atelier.</p>
+      <div class="cta-actions">
+        <a href="pages/services.html" class="btn btn-accent btn-lg"><i class="fas fa-compass"></i> Explore Bakery Directory</a>
+        <a href="pages/contact.html" class="btn btn-ghost btn-lg"><i class="fas fa-paper-plane"></i> Recommend an Atelier</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══ FOOTER ══ -->
+  <footer class="footer" aria-label="Site footer">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <a href="index.html" class="brand"
+          style="text-decoration: none; margin-bottom: 1.5rem; display: inline-flex; align-items: center;">
+          <div class="brand-logo">
+            <svg viewBox="16 26 68 54" fill="none" xmlns="http://www.w3.org/2000/svg"
+              style="width:33px; height:33px; display:block;">
+              <path d="M26 44Q28.5 44 28.5 41.5Q28.5 44 31 44Q28.5 44 28.5 46.5Q28.5 44 26 44Z" fill="#ffffff" />
+              <path d="M20 54Q22.5 54 22.5 51.5Q22.5 54 25 54Q22.5 54 22.5 56.5Q22.5 54 20 54Z" fill="#ffffff" />
+              <path d="M41 38Q43 38 43 36Q43 38 45 38Q43 38 43 40Q43 38 41 38Z" fill="#ffffff" />
+              <path d="M55 38Q57 38 57 36Q57 38 59 38Q57 38 57 40Q57 38 55 38Z" fill="#ffffff" />
+              <path d="M69 44Q71.5 44 71.5 41.5Q71.5 44 74 44Q71.5 44 71.5 46.5Q71.5 44 69 44Z" fill="#ffffff" />
+              <path d="M75 54Q77.5 54 77.5 51.5Q77.5 54 80 54Q77.5 54 77.5 56.5Q77.5 54 75 54Z" fill="#ffffff" />
+              <circle cx="37" cy="41" r="1" fill="#ffffff" />
+              <circle cx="63" cy="41" r="1" fill="#ffffff" />
+              <circle cx="32" cy="50" r="1" fill="#ffffff" />
+              <circle cx="68" cy="50" r="1" fill="#ffffff" />
+              <path d="M50 31C49 33 48.5 35 50 37.5C51.5 35 51 33 50 31Z" fill="#ffffff" />
+              <path d="M50 38C48 40.5 45.5 42 49 44.5C52.5 42 52 40.5 50 38Z" fill="#ffffff" />
+              <path d="M48 42C44.5 40 43 43.5 48.5 44.5Z" fill="#ffffff" />
+              <path d="M52 42C55.5 40 57 43.5 51.5 44.5Z" fill="#ffffff" />
+              <path d="M39 44C39 42.5 61 42.5 61 44V51.5C61 53.5 39 53.5 39 51.5Z" fill="#ffffff" fill-opacity="0.2"
+                stroke="#ffffff" stroke-width="1.8" />
+              <path d="M39 44C39 45.5 61 45.5 61 44" stroke="#ffffff" stroke-width="1.8" />
+              <path d="M39.5 48.5C42.5 51 45.5 51 48.5 48.5C51.5 51 54.5 51 57.5 48.5C59.5 50 60.5 49.5 60.5 48.5"
+                stroke="#ffffff" stroke-width="1.8" stroke-linecap="round" fill="none" />
+              <path d="M34.5 51C34.5 49 65.5 49 65.5 51V60.5C65.5 63 34.5 63 34.5 60.5Z" fill="#ffffff"
+                fill-opacity="0.2" stroke="#ffffff" stroke-width="1.8" />
+              <path d="M34.5 51C34.5 53 65.5 53 65.5 51" stroke="#ffffff" stroke-width="1.8" />
+              <path d="M35 56.5C39 60 43.5 60 48 56.5C52.5 60 57 60 61 56.5C63.5 58.5 65 57.5 65 56.5" stroke="#ffffff"
+                stroke-width="1.8" stroke-linecap="round" fill="none" />
+              <path d="M29.5 59.5C29.5 57 70.5 57 70.5 59.5V70C70.5 73.5 29.5 73.5 29.5 70Z" fill="#ffffff"
+                fill-opacity="0.2" stroke="#ffffff" stroke-width="1.8" />
+              <path d="M29.5 59.5C29.5 62 70.5 62 70.5 59.5" stroke="#ffffff" stroke-width="1.8" />
+              <path d="M30 65C35 70 41 70 47.5 65C54 70 60 70 65 65C68 67.5 70 66.5 70 65" stroke="#ffffff"
+                stroke-width="1.8" stroke-linecap="round" fill="none" />
+              <path d="M27 72C27 70 73 70 73 72C73 74.5 27 74.5 27 72Z" fill="#ffffff" fill-opacity="0.4"
+                stroke="#ffffff" stroke-width="1.6" />
+              <path d="M25 75C25 73 75 73 75 75C75 77.5 25 77.5 25 75Z" fill="#ffffff" fill-opacity="0.6"
+                stroke="#ffffff" stroke-width="1.6" />
+            </svg>
+          </div>
+          <span class="brand-name">Crumb &amp; <span>Cocoa</span></span>
+        </a>
+        <p class="footer-desc">The premier discovery and exploration platform celebrating artisan bakeries, handcrafted pastries, fine chocolates, and sweet craftsmanship around the world.</p>
+        <div class="social-links">
+          <a href="#" class="social-link" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+          <a href="#" class="social-link" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+          <a href="#" class="social-link" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+          <a href="#" class="social-link" aria-label="Pinterest"><i class="fab fa-pinterest-p"></i></a>
+        </div>
+      </div>
+
+      <div>
+        <h4 class="footer-heading">Explore</h4>
+        <ul class="footer-links">
+          <li><a href="index.html" class="footer-link">Home</a></li>
+          <li><a href="pages/about.html" class="footer-link">Our Discovery Mission</a></li>
+          <li><a href="pages/services.html" class="footer-link">Collections &amp; Guides</a></li>
+          <li><a href="pages/blog.html" class="footer-link">Baking Stories &amp; Journal</a></li>
+          <li><a href="pages/contact.html" class="footer-link">Submit a Bakery</a></li>
+        </ul>
+      </div>
+
+      <div>
+        <h4 class="footer-heading">Collections</h4>
+        <ul class="footer-links">
+          <li><a href="pages/services.html" class="footer-link">French Viennoiserie</a></li>
+          <li><a href="pages/services.html" class="footer-link">Wild Yeast Sourdough</a></li>
+          <li><a href="pages/services.html" class="footer-link">Artisan Chocolates</a></li>
+          <li><a href="pages/services.html" class="footer-link">Celebration Cakes</a></li>
+          <li><a href="pages/services.html" class="footer-link">Seasonal Treat Boxes</a></li>
+        </ul>
+      </div>
+
+      <div>
+        <h4 class="footer-heading">Discovery Hub</h4>
+        <ul class="footer-links">
+          <li><a href="tel:+18002786226" class="footer-link"><i class="fas fa-phone"
+                style="width:16px;color:var(--accent)"></i> +1 (800) CRUMB-CO</a></li>
+          <li><a href="mailto:hello@crumbcocoa.com" class="footer-link"><i class="fas fa-envelope"
+                style="width:16px;color:var(--accent)"></i> hello@crumbcocoa.com</a></li>
+          <li><a href="#" class="footer-link"><i class="fas fa-map-marker-alt"
+                style="width:16px;color:var(--accent)"></i> Global Bakery Collective</a></li>
+          <li><a href="#" class="footer-link"><i class="fas fa-clock" style="width:16px;color:var(--accent)"></i>
+              Daily Discovery Drops: 7AM EST</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <p>&copy; 2026 Crumb &amp; Cocoa. All rights reserved. Artisan Bakery &amp; Confectionery Discovery Platform.</p>
+      <div class="footer-bottom-links">
+        <a href="#">Privacy Policy</a>
+        <a href="#">Terms of Discovery</a>
+        <a href="#">Artisan Certification</a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Back to Top -->
+  <button class="back-to-top" aria-label="Back to top"><i class="fas fa-chevron-up"></i></button>
+
+  <script src="assets/js/main.js"></script>
+</body>
+
+</html>

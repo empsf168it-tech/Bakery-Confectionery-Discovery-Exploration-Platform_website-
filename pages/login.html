@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Sign in to Crumb &amp; Cocoa — Access your saved artisan bakeries, tasting notes, and discovery wishlists." />
+  <title>Sign In — Crumb &amp; Cocoa</title>
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🥐</text></svg>">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../assets/css/style.css" />
+  <link rel="stylesheet" href="../assets/css/dark-mode.css" />
+  <link id="rtl-stylesheet" rel="stylesheet" href="../assets/css/rtl.css" disabled />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+</head>
+<body>
+
+<div class="auth-container">
+  <div class="auth-form-side">
+    <!-- Auth Page Toggles (RTL & Theme) -->
+    <div class="auth-controls">
+      <button class="nav-icon-btn" onclick="window.Scala.RTLManager.toggle()" title="Toggle RTL" aria-label="Toggle RTL" style="font-size: 0.78rem; font-weight: 550;">RTL</button>
+      <button class="nav-icon-btn" onclick="window.Scala.ThemeManager.toggle()" title="Toggle Theme" aria-label="Toggle theme">
+        <i class="theme-toggle-icon fas fa-moon"></i>
+      </button>
+    </div>
+
+    <div class="auth-form-container">
+      <a href="../index.html" class="auth-logo">
+        <div class="brand-logo">
+          <svg viewBox="16 26 68 54" fill="none" xmlns="http://www.w3.org/2000/svg" style="width:33px; height:33px; display:block;">
+            <path d="M26 44Q28.5 44 28.5 41.5Q28.5 44 31 44Q28.5 44 28.5 46.5Q28.5 44 26 44Z" fill="#ffffff"/>
+            <path d="M20 54Q22.5 54 22.5 51.5Q22.5 54 25 54Q22.5 54 22.5 56.5Q22.5 54 20 54Z" fill="#ffffff"/>
+            <path d="M41 38Q43 38 43 36Q43 38 45 38Q43 38 43 40Q43 38 41 38Z" fill="#ffffff"/>
+            <path d="M55 38Q57 38 57 36Q57 38 59 38Q57 38 57 40Q57 38 55 38Z" fill="#ffffff"/>
+            <path d="M69 44Q71.5 44 71.5 41.5Q71.5 44 74 44Q71.5 44 71.5 46.5Q71.5 44 69 44Z" fill="#ffffff"/>
+            <path d="M75 54Q77.5 54 77.5 51.5Q77.5 54 80 54Q77.5 54 77.5 56.5Q77.5 54 75 54Z" fill="#ffffff"/>
+            <circle cx="37" cy="41" r="1" fill="#ffffff"/>
+            <circle cx="63" cy="41" r="1" fill="#ffffff"/>
+            <circle cx="32" cy="50" r="1" fill="#ffffff"/>
+            <circle cx="68" cy="50" r="1" fill="#ffffff"/>
+            <path d="M50 31C49 33 48.5 35 50 37.5C51.5 35 51 33 50 31Z" fill="#ffffff"/>
+            <path d="M50 38C48 40.5 45.5 42 49 44.5C52.5 42 52 40.5 50 38Z" fill="#ffffff"/>
+            <path d="M48 42C44.5 40 43 43.5 48.5 44.5Z" fill="#ffffff"/>
+            <path d="M52 42C55.5 40 57 43.5 51.5 44.5Z" fill="#ffffff"/>
+            <path d="M39 44C39 42.5 61 42.5 61 44V51.5C61 53.5 39 53.5 39 51.5Z" fill="#ffffff" fill-opacity="0.2" stroke="#ffffff" stroke-width="1.8"/>
+            <path d="M39 44C39 45.5 61 45.5 61 44" stroke="#ffffff" stroke-width="1.8"/>
+            <path d="M39.5 48.5C42.5 51 45.5 51 48.5 48.5C51.5 51 54.5 51 57.5 48.5C59.5 50 60.5 49.5 60.5 48.5" stroke="#ffffff" stroke-width="1.8" stroke-linecap="round" fill="none"/>
+            <path d="M34.5 51C34.5 49 65.5 49 65.5 51V60.5C65.5 63 34.5 63 34.5 60.5Z" fill="#ffffff" fill-opacity="0.2" stroke="#ffffff" stroke-width="1.8"/>
+            <path d="M34.5 51C34.5 53 65.5 53 65.5 51" stroke="#ffffff" stroke-width="1.8"/>
+            <path d="M35 56.5C39 60 43.5 60 48 56.5C52.5 60 57 60 61 56.5C63.5 58.5 65 57.5 65 56.5" stroke="#ffffff" stroke-width="1.8" stroke-linecap="round" fill="none"/>
+            <path d="M29.5 59.5C29.5 57 70.5 57 70.5 59.5V70C70.5 73.5 29.5 73.5 29.5 70Z" fill="#ffffff" fill-opacity="0.2" stroke="#ffffff" stroke-width="1.8"/>
+            <path d="M29.5 59.5C29.5 62 70.5 62 70.5 59.5" stroke="#ffffff" stroke-width="1.8"/>
+            <path d="M30 65C35 70 41 70 47.5 65C54 70 60 70 65 65C68 67.5 70 66.5 70 65" stroke="#ffffff" stroke-width="1.8" stroke-linecap="round" fill="none"/>
+            <path d="M27 72C27 70 73 70 73 72C73 74.5 27 74.5 27 72Z" fill="#ffffff" fill-opacity="0.4" stroke="#ffffff" stroke-width="1.6"/>
+            <path d="M25 75C25 73 75 73 75 75C75 77.5 25 77.5 25 75Z" fill="#ffffff" fill-opacity="0.6" stroke="#ffffff" stroke-width="1.6"/>
+          </svg>
+        </div>
+        <span class="brand-name">Crumb &amp; <span>Cocoa</span></span>
+      </a>
+
+      <h1 class="auth-title">Sign In</h1>
+      <p class="auth-subtitle">Sign in to access your saved artisan bakeries, tasting notes, and discovery wishlists.</p>
+
+      <!-- Login form -->
+      <form data-validate-form>
+        <div class="form-group">
+          <label class="form-label" for="email">Email Address</label>
+          <input type="email" id="email" class="form-control" placeholder="explorer@crumbcocoa.com" data-validate="required,email" autocomplete="email" />
+        </div>
+        <div class="form-group">
+          <label class="form-label" for="password">Password</label>
+          <div class="password-toggle">
+            <input type="password" id="password" class="form-control" placeholder="Enter your password" data-validate="required,minLength:6" autocomplete="current-password" />
+            <button type="button" class="toggle-btn fas fa-eye" aria-label="Toggle password visibility"></button>
+          </div>
+        </div>
+        <div class="form-group" style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 0.5rem; margin-top: 1rem; margin-bottom: 1.5rem;">
+          <div class="checkbox-group">
+            <input type="checkbox" id="remember" />
+            <label for="remember" style="font-size: .88rem; color: var(--text-secondary); cursor: pointer;">Remember me</label>
+          </div>
+          <a href="#" style="font-size: .85rem; color: var(--primary); font-weight: 500; text-decoration: none;">Forgot password?</a>
+        </div>
+        <button type="submit" class="btn btn-primary btn-lg" style="width:100%;justify-content:center;margin-bottom:1.5rem;">
+          <i class="fas fa-sign-in-alt"></i> Sign In to Explore
+        </button>
+        <div class="auth-divider">or continue with</div>
+
+        <div class="social-signin">
+          <button class="social-btn" type="button"><i class="fab fa-google"></i> Google</button>
+          <button class="social-btn" type="button"><i class="fab fa-apple"></i> Apple</button>
+        </div>
+      </form>
+
+      <div class="auth-footer">
+        Want to recommend or list a bakery? <a href="contact.html">Get in touch with our curators</a>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script src="../assets/js/main.js"></script>
+</body>
+</html>

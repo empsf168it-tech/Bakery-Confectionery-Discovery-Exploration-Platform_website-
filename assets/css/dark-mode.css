@@ -1,0 +1,157 @@
+/* ============================================================
+   DARK MODE — CRUMB & COCOA
+   ============================================================ */
+
+[data-theme="dark"] {
+  --bg-primary: #1F1511;
+  /* Deep warm dark cocoa base */
+  --bg-secondary: #2B1D17;
+  /* Roasted dark mocha secondary */
+  --bg-card: #36251E;
+  /* Slightly lighter warm cocoa card */
+  --card-overlay: rgba(54, 37, 30, 0.95);
+  --text-primary: #FFF8F0;
+  /* Warm cream heading */
+  --text-secondary: #DBC8BC;
+  /* Soft biscuit text */
+  --text-light: #A79185;
+  --border: #4D352B;
+  /* Dark warm crust border */
+  --primary: #E9A0A8;
+  /* Strawberry Pink accent in dark mode for radiant contrast */
+  --primary-light: #F4C4CA;
+  --primary-dark: #C58B55;
+  --secondary: #C58B55;
+  /* Caramel */
+  --secondary-light: #D4A373;
+  --accent: #E9A0A8;
+  --accent-2: #C58B55;
+  --shadow-sm: 0 2px 8px rgba(0, 0, 0, 0.6);
+  --shadow-md: 0 8px 32px rgba(0, 0, 0, 0.7);
+  --shadow-lg: 0 20px 60px rgba(0, 0, 0, 0.8);
+  --shadow-xl: 0 30px 80px rgba(0, 0, 0, 0.9);
+}
+
+[data-theme="dark"] .header.scrolled {
+  background: rgba(18, 18, 18, 0.95);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+[data-theme="dark"] .header.scrolled .brand-name {
+  color: #f5f5f5;
+}
+
+[data-theme="dark"] .header.scrolled .nav-link {
+  color: rgba(245, 245, 245, 0.85);
+}
+
+[data-theme="dark"] .header.scrolled .nav-link:hover,
+[data-theme="dark"] .header.scrolled .nav-link.active {
+  color: var(--accent);
+}
+
+[data-theme="dark"] .header.scrolled .nav-icon-btn {
+  background: #1e1e1e;
+  color: #f5f5f5;
+}
+
+[data-theme="dark"] .header.scrolled .hamburger {
+  background: #1e1e1e;
+}
+
+[data-theme="dark"] .header.scrolled .hamburger span {
+  background: #f5f5f5;
+}
+
+[data-theme="dark"] .feature-card,
+[data-theme="dark"] .class-card,
+[data-theme="dark"] .package-card,
+[data-theme="dark"] .testimonial-card,
+[data-theme="dark"] .blog-card,
+[data-theme="dark"] .faq-item,
+[data-theme="dark"] .stat-card {
+  background: #1e1e1e;
+  border-color: #2d2d2d;
+}
+
+[data-theme="dark"] .contact-item {
+  background: #1e1e1e;
+  border-color: #2d2d2d;
+}
+
+[data-theme="dark"] .form-control {
+  background: #1e1e1e;
+  border-color: #2d2d2d;
+  color: #f5f5f5;
+}
+
+[data-theme="dark"] .form-control:focus {
+  border-color: var(--primary);
+  background: #242424;
+}
+
+[data-theme="dark"] .schedule-table td {
+  background: #1e1e1e;
+  border-color: #2d2d2d;
+}
+
+[data-theme="dark"] .schedule-table tr:hover td {
+  background: rgba(245, 166, 35, 0.08);
+}
+
+[data-theme="dark"] .toast {
+  background: #1e1e1e;
+  border-color: #2d2d2d;
+}
+
+[data-theme="dark"] .social-link {
+  background: #1e1e1e;
+  border-color: #2d2d2d;
+  color: rgba(245, 245, 245, 0.7);
+}
+
+[data-theme="dark"] .map-container {
+  background: #1e1e1e;
+  border-color: #2d2d2d;
+}
+
+[data-theme="dark"] .auth-form-side {
+  background: #121212;
+}
+
+[data-theme="dark"] section:not(.hero):not(.cta-banner):not(.page-header):not(.apparatus-section) {
+  background: var(--bg-primary);
+}
+
+[data-theme="dark"] .bg-secondary-section {
+  background: var(--bg-secondary) !important;
+}
+
+[data-theme="dark"] .hero-stat {
+  background: rgba(30, 22, 16, 0.85);
+  border-color: rgba(245, 158, 11, 0.35);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.4);
+}
+
+[data-theme="dark"] .hero-stat-number {
+  color: var(--accent);
+}
+
+[data-theme="dark"] .hero-stat-label {
+  color: var(--text-secondary);
+}
+
+[data-theme="dark"] .brand-logo {
+  background: linear-gradient(135deg, #5B3427, #C58B55) !important;
+  border-color: rgba(255, 255, 255, 0.4) !important;
+  box-shadow: 0 4px 20px rgba(197, 139, 85, 0.45) !important;
+}
+
+/* Theme toggle animation */
+.theme-toggle-icon {
+  transition: transform 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+[data-theme="dark"] .theme-toggle-icon {
+  transform: rotate(180deg);
+}
