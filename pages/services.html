@@ -17,6 +17,7 @@
     .filter-bar { display:flex;gap:.75rem;flex-wrap:wrap;justify-content:center;margin-bottom:3rem; }
     .filter-btn { padding:.6rem 1.4rem;border:2px solid var(--border);border-radius:var(--radius-full);font-weight:600;font-size:.9rem;color:var(--text-secondary);transition:var(--transition-bounce);background:var(--bg-card); }
     .filter-btn:hover,.filter-btn.active { background:var(--primary);border-color:var(--primary);color:#fff;transform:translateY(-2px); }
+    [data-theme="dark"] .filter-btn:hover,[data-theme="dark"] .filter-btn.active { color:#000000 !important; }
     .process-connector { display:none; }
     @media(min-width:768px){
       .steps-grid { position:relative; }
@@ -70,8 +71,8 @@
       <li><a href="contact.html" class="nav-link">Contact</a></li>
     </ul>
     <div class="nav-actions">
-      <button class="nav-icon-btn" onclick="window.CrumbCocoa.RTLManager.toggle()" title="Toggle RTL" aria-label="Toggle RTL" style="font-size: 0.78rem; font-weight: 550;">RTL</button>
       <button class="nav-icon-btn" onclick="window.CrumbCocoa.ThemeManager.toggle()" title="Toggle Theme" aria-label="Toggle theme"><i class="theme-toggle-icon fas fa-moon"></i></button>
+      <a href="contact.html" class="btn btn-primary btn-sm">Contact Us</a>
     </div>
     <button class="hamburger" aria-label="Open menu"><span></span><span></span><span></span></button>
   </nav>
@@ -85,9 +86,9 @@
   <a href="blog.html" class="nav-link">Blog</a>
   <a href="contact.html" class="nav-link">Contact</a>
   <div class="mobile-menu-actions">
+    <a href="contact.html" class="btn btn-primary">Contact Us</a>
     <div class="mobile-menu-row">
-      <button class="btn btn-ghost" onclick="window.CrumbCocoa.RTLManager.toggle()" style="font-weight: 550;">RTL</button>
-      <button class="btn btn-ghost" onclick="window.CrumbCocoa.ThemeManager.toggle()"><i class="theme-toggle-icon fas fa-moon"></i></button>
+      <button class="btn btn-ghost" onclick="window.CrumbCocoa.ThemeManager.toggle()" style="width: 100%;"><i class="theme-toggle-icon fas fa-moon"></i> Switch Theme</button>
     </div>
   </div>
 </div>
@@ -234,7 +235,7 @@
       <!-- Celebration Cakes -->
       <div class="class-card animate-on-scroll delay-2" data-category="cakes">
         <div class="class-card-img">
-          <img src="https://images.unsplash.com/photo-1535141192574-5d4897c13136?q=80&w=800&auto=format&fit=crop" alt="Architectural Celebration Cakes" loading="lazy" />
+          <img src="https://images.unsplash.com/photo-1535254973040-607b474cb50d?q=80&w=800&auto=format&fit=crop" alt="Architectural Celebration Cakes" loading="lazy" />
           <span class="class-badge">Bespoke Design</span>
         </div>
         <div class="class-card-body">
